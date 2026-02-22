@@ -30,8 +30,46 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
         Bridging the gap between cutting-edge AI research and business reality.
         <br class="hidden md:block my-4"/>
-        We specialize in <span class="text-white font-medium">Robust Agentic Workflows</span>, <span class="text-white font-medium">AIOps Augmentation</span>, and <span class="text-white font-medium">Observability Engineering</span>.
+        We build <span class="text-white font-medium">Robust Agentic Workflows</span>, <span class="text-white font-medium">AIOps Augmentation</span>, and <span class="text-white font-medium">Observability Engineering</span> solutions.
       </p>
+
+      {/* Services Grid */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-5xl mx-auto pt-12 pb-8">
+        
+        {/* Service 1: B2B Sales Intelligence */}
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/30 transition-all hover:bg-white/[0.07] group">
+          <div class="w-10 h-10 mb-4 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">B2B Sales Intelligence</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Automate lead research, qualification, and service matching. Like a junior analyst that works 24/7 with perfect recall.
+          </p>
+        </div>
+
+        {/* Service 2: Agentic Operations */}
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all hover:bg-white/[0.07] group">
+          <div class="w-10 h-10 mb-4 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">Agentic Operations</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Autonomous workflows for complex admin tasks. From scheduling to document processing, we build reliable digital workers.
+          </p>
+        </div>
+
+        {/* Service 3: Agentic SRE */}
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-all hover:bg-white/[0.07] group">
+          <div class="w-10 h-10 mb-4 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">Enterprise Observability</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Full-stack monitoring and AIOps integration. We build the "Supervisory Control Plane" that keeps your AI agents safe and reliable.
+          </p>
+        </div>
+
+      </div>
 
       {/* Call to Action */}
       <div class="pt-8 flex flex-col md:flex-row items-center justify-center gap-6">
