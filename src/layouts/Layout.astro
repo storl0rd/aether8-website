@@ -1,0 +1,20 @@
+---
+import "../styles/global.css";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Aether8 AI Consulting Inc - Trusted AI Intelligence Layer" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-[#0a0a12] text-white overflow-x-hidden selection:bg-cyan-500 selection:text-black">
+		<slot />
+	</body>
+</html>

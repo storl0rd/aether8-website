@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --color-neon-blue: #00f3ff;
+  --color-neon-purple: #bc13fe;
+  --color-deep-space: #0a0a12;
+}
+
+body {
+  @apply bg-slate-950 text-slate-50 antialiased;
+  background: radial-gradient(circle at 50% 0%, #1e1e2e 0%, #0a0a12 100%);
+  min-height: 100vh;
+}
+
+/* Custom glow effect */
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+}
+
+.glow-box {
+  box-shadow: 0 0 30px rgba(188, 19, 254, 0.15);
+}
