@@ -14,6 +14,7 @@ const year = new Date().getFullYear();
       </a>
       <div class="hidden md:flex items-center gap-8 text-xs text-slate-400 tracking-[0.2em]">
         <a href="#services" class="hover:text-white transition-colors duration-200">SERVICES</a>
+        <a href="#products" class="hover:text-white transition-colors duration-200">PRODUCTS</a>
         <a href="#about" class="hover:text-white transition-colors duration-200">ABOUT</a>
         <a
           href="mailto:hello@aether8.ai"
@@ -212,6 +213,112 @@ const year = new Date().getFullYear();
             <div class="text-sm text-slate-400 mt-1 leading-relaxed">Every decision logged and traceable. You always know what your AI is doing, why it did it, and how to course-correct</div>
           </div>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Products ──────────────────────────────────────────────────────────────── -->
+  <section id="products" class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-16">
+        <p class="text-[#00f3ff] text-xs tracking-[0.35em] uppercase mb-3">Our Products</p>
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tighter">Introducing</h2>
+          <span class="text-3xl md:text-4xl font-black tracking-widest text-transparent bg-clip-text" style="background-image: linear-gradient(90deg, #00f3ff, #bc13fe);">PURSUIT</span>
+        </div>
+        <p class="text-slate-400 mt-2 max-w-2xl mx-auto text-base leading-relaxed">
+          Your autonomous AI-powered outbound sales team. Four specialised agents that prospect, engage, qualify, and close — while your human team focuses on what only humans can do.
+        </p>
+        <div class="inline-flex items-center gap-2 mt-5 text-xs text-amber-400/80 tracking-[0.2em] uppercase border border-amber-400/20 bg-amber-400/5 px-4 py-2 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+          MVP in Development · Early Access Available
+        </div>
+      </div>
+
+      <!-- Pipeline: 4 agents + 3 arrows = 7 cols on desktop -->
+      <div class="pursuit-pipeline grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] gap-0 items-start">
+
+        <!-- Agent 1: Scout -->
+        <div class="pursuit-agent group flex flex-col items-center text-center p-6 relative">
+          <div class="pursuit-node w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-cyan-500/60 group-hover:bg-cyan-500/20 transition-all duration-300 z-10 relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="text-[10px] text-cyan-500/60 tracking-[0.3em] uppercase mb-1">Agent 01</div>
+          <h3 class="text-white font-bold text-base mb-1">Scout</h3>
+          <p class="text-[11px] text-cyan-400/70 tracking-widest uppercase font-medium mb-3">Scoping</p>
+          <p class="text-slate-400 text-sm leading-relaxed">Researches the web for businesses matching your ideal customer profile. Surfaces contact details, firmographics, and decision-maker intel — stored and ready for Agent 2.</p>
+        </div>
+
+        <!-- Arrow 1 -->
+        <div class="pursuit-arrow hidden md:flex items-start justify-center pt-[3.25rem]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0,243,255,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+
+        <!-- Agent 2: Pitch -->
+        <div class="pursuit-agent group flex flex-col items-center text-center p-6 relative">
+          <div class="pursuit-node w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-purple-500/60 group-hover:bg-purple-500/20 transition-all duration-300 z-10 relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#bc13fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.36 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="text-[10px] text-purple-500/60 tracking-[0.3em] uppercase mb-1">Agent 02</div>
+          <h3 class="text-white font-bold text-base mb-1">Pitch</h3>
+          <p class="text-[11px] text-purple-400/70 tracking-widest uppercase font-medium mb-3">Engagement</p>
+          <p class="text-slate-400 text-sm leading-relaxed">Executes outreach using your scripts and tone. Handles cold calls, logs responses, runs sentiment analysis, qualifies each lead as hot, warm, or cold, and books follow-up calls.</p>
+        </div>
+
+        <!-- Arrow 2 -->
+        <div class="pursuit-arrow hidden md:flex items-start justify-center pt-[3.25rem]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(188,19,254,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+
+        <!-- Agent 3: Sync -->
+        <div class="pursuit-agent group flex flex-col items-center text-center p-6 relative">
+          <div class="pursuit-node w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-emerald-500/60 group-hover:bg-emerald-500/20 transition-all duration-300 z-10 relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h8"/><path d="M8 14h4"/></svg>
+          </div>
+          <div class="text-[10px] text-emerald-500/60 tracking-[0.3em] uppercase mb-1">Agent 03</div>
+          <h3 class="text-white font-bold text-base mb-1">Sync</h3>
+          <p class="text-[11px] text-emerald-400/70 tracking-widest uppercase font-medium mb-3">CRM Update</p>
+          <p class="text-slate-400 text-sm leading-relaxed">Writes every lead, note, call outcome, and qualification score directly into HubSpot. Your CRM stays current without a single manual entry from your team.</p>
+        </div>
+
+        <!-- Arrow 3 -->
+        <div class="pursuit-arrow hidden md:flex items-start justify-center pt-[3.25rem]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(16,185,129,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+
+        <!-- Agent 4: Draft -->
+        <div class="pursuit-agent group flex flex-col items-center text-center p-6 relative">
+          <div class="pursuit-node w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:border-amber-500/60 group-hover:bg-amber-500/20 transition-all duration-300 z-10 relative">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="text-[10px] text-amber-500/60 tracking-[0.3em] uppercase mb-1">Agent 04</div>
+          <h3 class="text-white font-bold text-base mb-1">Draft</h3>
+          <p class="text-[11px] text-amber-400/70 tracking-widest uppercase font-medium mb-3">Proposals</p>
+          <p class="text-slate-400 text-sm leading-relaxed">After your manager's call, Draft learns from your previous winning proposals and generates a tailored pitch deck or document — ready to review and send.</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom pipeline grid: override for 4 cols with connector arrows -->
+      <!-- Integrations + CTA row -->
+      <div class="mt-14 flex flex-col md:flex-row items-center justify-between gap-8 pt-10 border-t border-white/5">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="text-xs text-slate-500 tracking-widest uppercase">Integrates with</span>
+          <span class="text-xs text-slate-400 border border-white/10 bg-white/[0.03] px-3 py-1.5 rounded-full">HubSpot CRM</span>
+          <span class="text-xs text-slate-400 border border-white/10 bg-white/[0.03] px-3 py-1.5 rounded-full">Google Calendar</span>
+          <span class="text-xs text-slate-400 border border-white/10 bg-white/[0.03] px-3 py-1.5 rounded-full">Twilio</span>
+          <span class="text-xs text-slate-400 border border-white/10 bg-white/[0.03] px-3 py-1.5 rounded-full">SendGrid</span>
+          <span class="text-xs text-slate-500 border border-white/[0.06] bg-white/[0.02] px-3 py-1.5 rounded-full">+ more planned</span>
+        </div>
+        <a
+          href="mailto:hello@aether8.ai?subject=PURSUIT Early Access"
+          class="shrink-0 group flex items-center gap-2 border border-[#00f3ff]/30 text-[#00f3ff] px-6 py-3 rounded-full text-sm font-medium tracking-wide hover:bg-[#00f3ff]/10 hover:border-[#00f3ff]/60 transition-all duration-200"
+        >
+          Request Early Access
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
 
     </div>
