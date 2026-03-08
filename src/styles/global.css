@@ -4,17 +4,25 @@
   --color-neon-blue: #00f3ff;
   --color-neon-purple: #bc13fe;
   --color-deep-space: #0a0a12;
+  /* Override Tailwind v4's default font with Avenir (system on macOS/iOS), Nunito Sans as web fallback */
+  --default-font-family: 'Avenir', 'Avenir Next', 'Nunito Sans', system-ui, sans-serif;
+  --font-sans: 'Avenir', 'Avenir Next', 'Nunito Sans', system-ui, sans-serif;
+}
+
+html {
+  font-family: 'Avenir', 'Avenir Next', 'Nunito Sans', system-ui, sans-serif;
+  scroll-padding-top: 5rem;
 }
 
 body {
   @apply bg-slate-950 text-slate-50 antialiased;
-  background: radial-gradient(circle at 50% 0%, #1e1e2e 0%, #0a0a12 100%);
+  font-family: 'Avenir', 'Avenir Next', 'Nunito Sans', system-ui, sans-serif;
+  background: radial-gradient(ellipse at 50% 0%, #1a1a2e 0%, #0a0a12 60%);
   min-height: 100vh;
 }
 
-/* Custom glow effect */
 .glow-text {
-  text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+  text-shadow: 0 0 20px rgba(0, 243, 255, 0.5), 0 0 40px rgba(0, 243, 255, 0.2);
 }
 
 .glow-box {
