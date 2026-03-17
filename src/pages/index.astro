@@ -4,45 +4,64 @@ import Layout from '../layouts/Layout.astro';
 const year = new Date().getFullYear();
 ---
 
-<Layout title="Aether8 AI — Intelligent Systems. Infinite Possibilities.">
+<Layout title="Aether8 AI - Intelligent Systems. Infinite Possibilities.">
 
   <!-- ── Navigation ─────────────────────────────────────────────────────────── -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur-md bg-[#0a0a12]/80">
-    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="text-sm font-bold tracking-[0.25em] uppercase">
-        AETHER<span class="text-[#00f3ff]">8</span><span class="text-[#00f3ff]/50">.ai</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8 text-xs text-slate-400 tracking-[0.2em]">
-        <a href="#services" class="hover:text-white transition-colors duration-200">SERVICES</a>
-        <a href="#products" class="hover:text-white transition-colors duration-200">PRODUCTS</a>
-        <a href="#about" class="hover:text-white transition-colors duration-200">ABOUT</a>
-        <a
-          href="mailto:hello@aether8.ai"
-          class="border border-[#00f3ff]/30 text-[#00f3ff] px-5 py-2 rounded-full hover:bg-[#00f3ff]/10 transition-all duration-200"
-        >CONTACT</a>
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-6xl mx-auto px-6">
+      <nav class="flex items-center justify-between h-16 border-b border-white/[0.04]">
+        <a href="/" class="flex items-center gap-2 cursor-pointer group">
+          <span class="text-[13px] font-semibold tracking-[0.25em] uppercase text-white/90">
+            AETHER<span class="text-[var(--color-accent)]">8</span><span class="text-white/30">.ai</span>
+          </span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#services" class="px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300 cursor-pointer">Services</a>
+          <a href="#products" class="px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300 cursor-pointer">Products</a>
+          <a href="#about" class="px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300 cursor-pointer">About</a>
+          <a
+            href="mailto:hello@aether8.ai"
+            class="ml-4 text-[11px] tracking-[0.15em] uppercase border border-white/10 text-white/80 px-5 py-2 rounded-full hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5 transition-all duration-300 cursor-pointer"
+          >Contact</a>
+        </div>
+        <!-- Mobile hamburger -->
+        <button id="mobile-toggle" class="md:hidden flex flex-col gap-[5px] p-2 cursor-pointer" aria-label="Toggle menu">
+          <span class="block w-5 h-[1.5px] bg-white/70 transition-all duration-300 origin-center" id="bar1"></span>
+          <span class="block w-5 h-[1.5px] bg-white/70 transition-all duration-300" id="bar2"></span>
+          <span class="block w-5 h-[1.5px] bg-white/70 transition-all duration-300 origin-center" id="bar3"></span>
+        </button>
+      </nav>
+    </div>
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-400 ease-in-out">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-3 border-t border-white/[0.04]">
+        <a href="#services" class="mobile-nav-link text-[12px] text-slate-400 tracking-[0.2em] uppercase py-2 hover:text-white transition-colors duration-300">Services</a>
+        <a href="#products" class="mobile-nav-link text-[12px] text-slate-400 tracking-[0.2em] uppercase py-2 hover:text-white transition-colors duration-300">Products</a>
+        <a href="#about" class="mobile-nav-link text-[12px] text-slate-400 tracking-[0.2em] uppercase py-2 hover:text-white transition-colors duration-300">About</a>
+        <a href="mailto:hello@aether8.ai" class="mobile-nav-link text-[12px] text-[var(--color-accent)] tracking-[0.15em] uppercase py-2 transition-colors duration-300">Contact</a>
       </div>
-    </nav>
+    </div>
   </header>
 
   <!-- ── Hero ───────────────────────────────────────────────────────────────── -->
   <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16 relative overflow-hidden">
 
-    <!-- Ambient blobs -->
+    <!-- Refined ambient lighting -->
     <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-1/4 left-1/4 w-[700px] h-[400px] bg-cyan-500/[0.04] rounded-full blur-[140px]"></div>
-      <div class="absolute bottom-1/3 right-1/4 w-[500px] h-[350px] bg-purple-600/[0.04] rounded-full blur-[140px]"></div>
+      <div class="absolute top-1/3 left-1/3 w-[800px] h-[500px] bg-[var(--color-accent)]/[0.03] rounded-full blur-[160px]"></div>
+      <div class="absolute bottom-1/4 right-1/3 w-[600px] h-[400px] bg-[var(--color-purple)]/[0.025] rounded-full blur-[160px]"></div>
     </div>
 
-    <!-- Dot grid -->
-    <div
-      class="absolute inset-0 pointer-events-none"
-      style="background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 40px 40px;"
-    ></div>
+    <!-- Subtle grid -->
+    <div class="absolute inset-0 pointer-events-none grid-bg opacity-40"></div>
+
+    <!-- Radial fade at edges -->
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 60% at 50% 45%, transparent 0%, #06060e 100%);"></div>
 
     <!-- Content -->
-    <div class="relative z-10 flex flex-col items-center gap-7">
+    <div class="relative z-10 flex flex-col items-center gap-8 max-w-3xl">
 
-      <!-- Logo image with ambient animation -->
+      <!-- Logo -->
       <div class="logo-wrapper">
         <div class="logo-glow"></div>
         <div class="logo-ring logo-ring--outer"></div>
@@ -61,90 +80,106 @@ const year = new Date().getFullYear();
       </div>
 
       <!-- Tagline -->
-      <p class="tagline text-slate-300 font-light tracking-[0.25em] uppercase" style="font-size: clamp(0.75rem, 2vw, 1rem);">
-        Intelligent Systems. <span class="text-[#00f3ff]">Infinite Possibilities.</span>
+      <p class="tagline text-white/60 font-light tracking-[0.3em] uppercase text-[clamp(0.7rem,1.8vw,0.9rem)]">
+        Intelligent Systems. <span class="text-[var(--color-accent)]">Infinite Possibilities.</span>
       </p>
 
+      <!-- Hero headline -->
+      <h1 class="hero-headline text-[clamp(1.8rem,4.5vw,3.2rem)] font-bold leading-[1.15] tracking-tight text-white">
+        We build <span class="gradient-text">agentic AI</span> that<br class="hidden sm:block" />
+        runs your operations - reliably.
+      </h1>
+
       <!-- Description -->
-      <p class="description text-slate-400 max-w-2xl text-center leading-relaxed" style="font-size: clamp(0.9rem, 1.5vw, 1.05rem);">
-        We embed with small and medium businesses as a forward-deployed Agentic Engineer — building tailored AI solutions with security, reliability, and observability at the core.
+      <p class="description text-slate-400 max-w-xl text-center leading-relaxed text-[clamp(0.9rem,1.4vw,1.05rem)]">
+        Forward-deployed engineering for small and medium businesses. We embed with your team, build tailored AI solutions, and keep them running with SRE-grade observability.
       </p>
 
       <!-- CTAs -->
-      <div class="cta-group flex flex-col sm:flex-row gap-4 items-center">
+      <div class="cta-group flex flex-col sm:flex-row gap-4 items-center mt-2">
         <a
           href="mailto:hello@aether8.ai"
-          class="group flex items-center gap-2 bg-white text-[#0a0a12] font-semibold px-8 py-3 rounded-full text-sm tracking-wide hover:scale-105 transition-all duration-200 hover:shadow-[0_0_35px_rgba(0,243,255,0.5)]"
+          class="group relative inline-flex items-center gap-2.5 bg-white text-[#06060e] font-semibold px-8 py-3.5 rounded-full text-sm tracking-wide overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,212,255,0.35)]"
         >
-          Start a Project
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <span class="relative z-10">Start a Project</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
-        <a href="#services" class="text-slate-400 hover:text-slate-200 transition-colors text-xs tracking-[0.2em] uppercase">
+        <a href="#services" class="text-slate-500 hover:text-slate-300 transition-colors text-xs tracking-[0.2em] uppercase cursor-pointer">
           Explore Services ↓
         </a>
       </div>
 
       <!-- Status badge -->
-      <div class="badge flex items-center gap-2 text-xs text-slate-500 tracking-[0.15em] uppercase">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <div class="badge flex items-center gap-2.5 text-[11px] text-slate-600 tracking-[0.15em] uppercase mt-2">
+        <span class="glow-dot"></span>
         Accepting New Clients · Ontario, Canada
       </div>
 
     </div>
+
+    <!-- Scroll line -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-0 animate-fade-up delay-14">
+      <span class="text-[10px] uppercase tracking-[0.3em] text-slate-700">Scroll</span>
+      <div class="w-px h-10 bg-gradient-to-b from-slate-600 to-transparent animate-pulse"></div>
+    </div>
   </section>
 
+  <!-- ── Divider ── -->
+  <div class="accent-line max-w-6xl mx-auto"></div>
+
   <!-- ── Services ───────────────────────────────────────────────────────────── -->
-  <section id="services" class="py-28 px-6">
+  <section id="services" class="py-32 px-6 relative">
     <div class="max-w-6xl mx-auto">
 
-      <div class="text-center mb-16">
-        <p class="text-[#00f3ff] text-xs tracking-[0.35em] uppercase mb-3">How We Work</p>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter">Your Forward-Deployed AI Partner</h2>
-        <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
-          We don't sell off-the-shelf tools. We embed with your team, learn your operations, and build AI that actually fits — then make sure it stays reliable.
+      <div class="text-center mb-20">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">How We Work</p>
+        <h2 class="text-3xl md:text-[2.75rem] font-bold tracking-tight leading-tight">Your Forward-Deployed<br class="hidden sm:block" /> AI Partner</h2>
+        <p class="text-slate-400 mt-5 max-w-2xl mx-auto text-base leading-relaxed">
+          We don't sell off-the-shelf tools. We embed with your team, learn your operations, and build AI that actually fits - then make sure it stays reliable.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5">
+      <!-- Service cards - Bento-style grid -->
+      <div class="grid md:grid-cols-3 gap-4">
 
         <!-- Tailored AI Solutions -->
-        <div class="group p-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-cyan-500/25 hover:bg-white/[0.04] transition-all duration-300 cursor-default">
-          <div class="w-11 h-11 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <div class="glass-card group p-8 rounded-2xl cursor-default">
+          <div class="w-11 h-11 rounded-xl bg-[var(--color-accent)]/[0.08] flex items-center justify-center mb-6 group-hover:bg-[var(--color-accent)]/[0.15] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
-          <h3 class="font-semibold mb-3">Tailored AI Solutions</h3>
-          <p class="text-slate-400 text-base leading-relaxed">No templates, no generic tools. We design and build agentic workflows shaped precisely around your business — automating the work that costs you the most time and people.</p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="text-[10px] text-cyan-500/50 tracking-widest uppercase border border-cyan-500/15 px-2.5 py-1 rounded-full">Custom Build</span>
-            <span class="text-[10px] text-cyan-500/50 tracking-widest uppercase border border-cyan-500/15 px-2.5 py-1 rounded-full">Workflow Design</span>
-            <span class="text-[10px] text-cyan-500/50 tracking-widest uppercase border border-cyan-500/15 px-2.5 py-1 rounded-full">AI Integration</span>
+          <h3 class="text-lg font-semibold mb-3 text-white">Tailored AI Solutions</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">No templates, no generic tools. We design and build agentic workflows shaped precisely around your business - automating the work that costs you the most time and people.</p>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="text-[10px] text-[var(--color-accent)]/50 tracking-[0.15em] uppercase border border-[var(--color-accent)]/10 px-3 py-1.5 rounded-full">Custom Build</span>
+            <span class="text-[10px] text-[var(--color-accent)]/50 tracking-[0.15em] uppercase border border-[var(--color-accent)]/10 px-3 py-1.5 rounded-full">Workflow Design</span>
+            <span class="text-[10px] text-[var(--color-accent)]/50 tracking-[0.15em] uppercase border border-[var(--color-accent)]/10 px-3 py-1.5 rounded-full">AI Integration</span>
           </div>
         </div>
 
         <!-- Forward-Deployed Engineering -->
-        <div class="group p-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-purple-500/25 hover:bg-white/[0.04] transition-all duration-300 cursor-default">
-          <div class="w-11 h-11 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bc13fe" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+        <div class="glass-card group p-8 rounded-2xl cursor-default">
+          <div class="w-11 h-11 rounded-xl bg-[var(--color-purple)]/[0.08] flex items-center justify-center mb-6 group-hover:bg-[var(--color-purple)]/[0.15] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
           </div>
-          <h3 class="font-semibold mb-3">Forward-Deployed Engineering</h3>
-          <p class="text-slate-400 text-base leading-relaxed">We work alongside your team — not at arm's length. We learn your processes, surface where AI can make the biggest impact, and ship working solutions fast. No slide decks.</p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="text-[10px] text-purple-500/50 tracking-widest uppercase border border-purple-500/15 px-2.5 py-1 rounded-full">Embedded Delivery</span>
-            <span class="text-[10px] text-purple-500/50 tracking-widest uppercase border border-purple-500/15 px-2.5 py-1 rounded-full">Rapid Deployment</span>
+          <h3 class="text-lg font-semibold mb-3 text-white">Forward-Deployed Engineering</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">We work alongside your team - not at arm's length. We learn your processes, surface where AI can make the biggest impact, and ship working solutions fast.</p>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="text-[10px] text-[var(--color-purple)]/50 tracking-[0.15em] uppercase border border-[var(--color-purple)]/10 px-3 py-1.5 rounded-full">Embedded Delivery</span>
+            <span class="text-[10px] text-[var(--color-purple)]/50 tracking-[0.15em] uppercase border border-[var(--color-purple)]/10 px-3 py-1.5 rounded-full">Rapid Deployment</span>
           </div>
         </div>
 
         <!-- Security, Reliability & Observability -->
-        <div class="group p-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-emerald-500/25 hover:bg-white/[0.04] transition-all duration-300 cursor-default">
-          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="glass-card group p-8 rounded-2xl cursor-default">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/[0.08] flex items-center justify-center mb-6 group-hover:bg-emerald-500/[0.15] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="font-semibold mb-3">Security, Reliability & Observability</h3>
-          <p class="text-slate-400 text-base leading-relaxed">Every system we build has guardrails baked in. Full audit trails, self-healing agents, zero hallucinations in production. You always know what your AI is doing and why.</p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="text-[10px] text-emerald-500/50 tracking-widest uppercase border border-emerald-500/15 px-2.5 py-1 rounded-full">Audit Trails</span>
-            <span class="text-[10px] text-emerald-500/50 tracking-widest uppercase border border-emerald-500/15 px-2.5 py-1 rounded-full">Self-Healing</span>
-            <span class="text-[10px] text-emerald-500/50 tracking-widest uppercase border border-emerald-500/15 px-2.5 py-1 rounded-full">SRE-Grade</span>
+          <h3 class="text-lg font-semibold mb-3 text-white">Security, Reliability & Observability</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">Every system we build has guardrails baked in. Full audit trails, self-healing agents, zero hallucinations in production.</p>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="text-[10px] text-emerald-500/50 tracking-[0.15em] uppercase border border-emerald-500/10 px-3 py-1.5 rounded-full">Audit Trails</span>
+            <span class="text-[10px] text-emerald-500/50 tracking-[0.15em] uppercase border border-emerald-500/10 px-3 py-1.5 rounded-full">Self-Healing</span>
+            <span class="text-[10px] text-emerald-500/50 tracking-[0.15em] uppercase border border-emerald-500/10 px-3 py-1.5 rounded-full">SRE-Grade</span>
           </div>
         </div>
 
@@ -153,64 +188,67 @@ const year = new Date().getFullYear();
   </section>
 
   <!-- ── About ──────────────────────────────────────────────────────────────── -->
-  <section id="about" class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+  <section id="about" class="py-32 px-6 relative">
+    <div class="accent-line max-w-6xl mx-auto mb-32"></div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-start">
 
       <div>
-        <p class="text-[#00f3ff] text-xs tracking-[0.35em] uppercase mb-4">Our Approach</p>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter mb-6">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-5 font-medium">Our Approach</p>
+        <h2 class="text-3xl md:text-[2.75rem] font-bold tracking-tight leading-tight mb-7">
           Built for SMBs.<br/>Built to Last.
         </h2>
-        <p class="text-slate-400 leading-relaxed mb-4">
-          AI adoption is hard for small and medium businesses — most tools are built for enterprises or require teams you don't have. We bridge that gap by acting as your <span class="text-white font-medium">on-demand Agentic Engineering team</span>, handling the complexity so you don't have to.
+        <p class="text-slate-400 leading-relaxed mb-4 text-[15px]">
+          AI adoption is hard for small and medium businesses - most tools are built for enterprises or require teams you don't have. We bridge that gap by acting as your <span class="text-white font-medium">on-demand Agentic Engineering team</span>, handling the complexity so you don't have to.
         </p>
-        <p class="text-slate-400 leading-relaxed">
-          Whether you're a services firm, a logistics operation, a retail business, or anything in between — if repetitive work is slowing you down, we can automate it reliably.
+        <p class="text-slate-400 leading-relaxed text-[15px]">
+          Whether you're a services firm, a logistics operation, a retail business, or anything in between - if repetitive work is slowing you down, we can automate it reliably.
         </p>
 
-        <div class="mt-10 flex gap-10">
+        <!-- Stats -->
+        <div class="flex gap-12 mt-12 pt-8 border-t border-white/[0.06]">
           <div>
-            <div class="text-3xl font-black text-[#00f3ff]">0</div>
-            <div class="text-xs text-slate-500 mt-1 tracking-widest uppercase">Hallucinations</div>
+            <div class="text-3xl font-extrabold text-[var(--color-accent)]">0</div>
+            <div class="text-[10px] text-slate-600 mt-1.5 tracking-[0.2em] uppercase">Hallucinations</div>
           </div>
           <div>
-            <div class="text-3xl font-black text-[#bc13fe]">∞</div>
-            <div class="text-xs text-slate-500 mt-1 tracking-widest uppercase">Scalability</div>
+            <div class="text-3xl font-extrabold text-[var(--color-purple)]">∞</div>
+            <div class="text-[10px] text-slate-600 mt-1.5 tracking-[0.2em] uppercase">Scalability</div>
           </div>
           <div>
-            <div class="text-3xl font-black text-white">100%</div>
-            <div class="text-xs text-slate-500 mt-1 tracking-widest uppercase">Traceable</div>
+            <div class="text-3xl font-extrabold text-white">100%</div>
+            <div class="text-[10px] text-slate-600 mt-1.5 tracking-[0.2em] uppercase">Traceable</div>
           </div>
         </div>
       </div>
 
+      <!-- Feature list -->
       <div class="space-y-3">
-        <div class="p-5 rounded-xl border border-cyan-500/10 bg-white/[0.02] flex gap-4">
-          <div class="w-2 h-2 rounded-full bg-cyan-400 mt-1.5 shrink-0"></div>
+        <div class="glass-card p-5 rounded-xl flex gap-4">
+          <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2 shrink-0 shadow-[0_0_6px_var(--color-accent)]"></div>
           <div>
-            <div class="text-sm font-medium text-white">Any Industry, Any Function</div>
-            <div class="text-sm text-slate-400 mt-1 leading-relaxed">Sales, operations, finance, HR, logistics — if humans are doing repetitive work, agents can do it better</div>
+            <div class="text-sm font-medium text-white mb-1">Any Industry, Any Function</div>
+            <div class="text-sm text-slate-500 leading-relaxed">Sales, operations, finance, HR, logistics - if humans are doing repetitive work, agents can do it better</div>
           </div>
         </div>
-        <div class="p-5 rounded-xl border border-purple-500/10 bg-white/[0.02] flex gap-4">
-          <div class="w-2 h-2 rounded-full bg-purple-400 mt-1.5 shrink-0"></div>
+        <div class="glass-card p-5 rounded-xl flex gap-4">
+          <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-purple)] mt-2 shrink-0 shadow-[0_0_6px_var(--color-purple)]"></div>
           <div>
-            <div class="text-sm font-medium text-white">No AI Team Required</div>
-            <div class="text-sm text-slate-400 mt-1 leading-relaxed">We handle architecture, deployment, and maintenance. You get the outcomes without building an internal AI practice</div>
+            <div class="text-sm font-medium text-white mb-1">No AI Team Required</div>
+            <div class="text-sm text-slate-500 leading-relaxed">We handle architecture, deployment, and maintenance. You get the outcomes without building an internal AI practice</div>
           </div>
         </div>
-        <div class="p-5 rounded-xl border border-emerald-500/10 bg-white/[0.02] flex gap-4">
-          <div class="w-2 h-2 rounded-full bg-emerald-400 mt-1.5 shrink-0"></div>
+        <div class="glass-card p-5 rounded-xl flex gap-4">
+          <div class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0 shadow-[0_0_6px_#34d399]"></div>
           <div>
-            <div class="text-sm font-medium text-white">Self-Healing, Always-On</div>
-            <div class="text-sm text-slate-400 mt-1 leading-relaxed">Agents surface ambiguity for human review rather than guessing. Systems stay reliable even when the unexpected happens</div>
+            <div class="text-sm font-medium text-white mb-1">Self-Healing, Always-On</div>
+            <div class="text-sm text-slate-500 leading-relaxed">Agents surface ambiguity for human review rather than guessing. Systems stay reliable even when the unexpected happens</div>
           </div>
         </div>
-        <div class="p-5 rounded-xl border border-cyan-500/10 bg-white/[0.02] flex gap-4">
-          <div class="w-2 h-2 rounded-full bg-cyan-400 mt-1.5 shrink-0"></div>
+        <div class="glass-card p-5 rounded-xl flex gap-4">
+          <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2 shrink-0 shadow-[0_0_6px_var(--color-accent)]"></div>
           <div>
-            <div class="text-sm font-medium text-white">Transparent by Design</div>
-            <div class="text-sm text-slate-400 mt-1 leading-relaxed">Every decision logged and traceable. You always know what your AI is doing, why it did it, and how to course-correct</div>
+            <div class="text-sm font-medium text-white mb-1">Transparent by Design</div>
+            <div class="text-sm text-slate-500 leading-relaxed">Every decision logged and traceable. You always know what your AI is doing, why it did it, and how to course-correct</div>
           </div>
         </div>
       </div>
@@ -219,78 +257,80 @@ const year = new Date().getFullYear();
   </section>
 
   <!-- ── Products ──────────────────────────────────────────────────────────────── -->
-  <section id="products" class="py-28 px-6 border-t border-white/5">
+  <section id="products" class="py-32 px-6 relative">
+    <div class="accent-line max-w-6xl mx-auto mb-32"></div>
     <div class="max-w-6xl mx-auto">
 
-      <div class="text-center mb-12">
-        <p class="text-[#00f3ff] text-xs tracking-[0.35em] uppercase mb-3">Coming Soon</p>
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter mb-2">Our Products</h2>
+      <div class="text-center mb-16">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">Coming Soon</p>
+        <h2 class="text-3xl md:text-[2.75rem] font-bold tracking-tight">Our Products</h2>
       </div>
 
       <!-- PURSUIT teaser card -->
-      <div class="relative rounded-2xl border border-white/[0.08] bg-white/[0.02] overflow-hidden p-10 md:p-14 flex flex-col md:flex-row items-center gap-10">
+      <div class="border-gradient rounded-2xl overflow-hidden">
+        <div class="glass-card rounded-2xl p-10 md:p-14 flex flex-col md:flex-row items-center gap-10 relative !border-0">
 
-        <!-- Ambient glow -->
-        <div class="absolute inset-0 pointer-events-none">
-          <div class="absolute top-0 left-1/4 w-[500px] h-[200px] bg-cyan-500/[0.05] rounded-full blur-[80px]"></div>
-          <div class="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-purple-600/[0.05] rounded-full blur-[80px]"></div>
-        </div>
-
-        <!-- Left: wordmark + meta -->
-        <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left shrink-0">
-          <div class="text-[10px] text-slate-500 tracking-[0.35em] uppercase mb-3">Product 01</div>
-          <div class="text-5xl md:text-6xl font-black tracking-widest text-transparent bg-clip-text mb-4" style="background-image: linear-gradient(135deg, #00f3ff 0%, #bc13fe 100%);">
-            PURSUIT
+          <!-- Ambient glow -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-[500px] h-[200px] bg-[var(--color-accent)]/[0.03] rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-[var(--color-purple)]/[0.03] rounded-full blur-[100px]"></div>
           </div>
-          <div class="inline-flex items-center gap-2 text-xs text-amber-400/80 tracking-[0.2em] uppercase border border-amber-400/20 bg-amber-400/5 px-3 py-1.5 rounded-full">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-            Early Access
+
+          <!-- Left: wordmark + meta -->
+          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left shrink-0">
+            <div class="text-5xl md:text-6xl font-extrabold tracking-[0.05em] gradient-text mb-5">
+              PURSUIT
+            </div>
+            <div class="inline-flex items-center gap-2.5 text-[10px] text-amber-400/70 tracking-[0.2em] uppercase border border-amber-400/15 bg-amber-400/[0.04] px-4 py-2 rounded-full">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              Early Access
+            </div>
           </div>
-        </div>
 
-        <!-- Divider -->
-        <div class="hidden md:block w-px self-stretch bg-white/[0.06] shrink-0"></div>
+          <!-- Divider -->
+          <div class="hidden md:block w-px self-stretch bg-white/[0.06] shrink-0"></div>
 
-        <!-- Right: abstract description + CTA -->
-        <div class="relative z-10 flex flex-col gap-5 flex-1">
-          <p class="text-slate-300 text-lg leading-relaxed font-light">
-            An agentic system purpose-built to eliminate the manual overhead between opportunity and close.
-          </p>
-          <p class="text-slate-500 leading-relaxed">
-            PURSUIT is currently in private development. We're working with a select group of early partners to shape the product. If you're curious, reach out — we'll share more under NDA.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 mt-2">
-            <a
-              href="mailto:hello@aether8.ai?subject=PURSUIT — Early Access Inquiry"
-              class="group inline-flex items-center gap-2 border border-[#00f3ff]/30 text-[#00f3ff] px-6 py-3 rounded-full text-sm font-medium tracking-wide hover:bg-[#00f3ff]/10 hover:border-[#00f3ff]/60 transition-all duration-200"
-            >
-              Request Early Access
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
+          <!-- Right: abstract description + CTA -->
+          <div class="relative z-10 flex flex-col gap-5 flex-1">
+            <p class="text-white/80 text-lg leading-relaxed font-light">
+              An agentic system purpose-built to eliminate the manual overhead between opportunity and close.
+            </p>
+            <p class="text-slate-500 leading-relaxed text-[15px]">
+              PURSUIT is currently in private development. We're working with a select group of early partners to shape the product. If you're curious, reach out - we'll share more under NDA.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 mt-3">
+              <a
+                href="mailto:hello@aether8.ai?subject=PURSUIT - Early Access Inquiry"
+                class="group inline-flex items-center gap-2 border border-white/10 text-white/80 px-6 py-3 rounded-full text-sm font-medium tracking-wide hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5 transition-all duration-300 cursor-pointer"
+              >
+                Request Early Access
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- ── Contact CTA ─────────────────────────────────────────────────────────── -->
-  <section id="contact" class="py-36 px-6 text-center relative overflow-hidden">
+  <section id="contact" class="py-40 px-6 text-center relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-cyan-500/[0.04] rounded-full blur-[100px]"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[var(--color-accent)]/[0.025] rounded-full blur-[120px]"></div>
     </div>
     <div class="relative z-10 max-w-2xl mx-auto">
-      <p class="text-[#00f3ff] text-xs tracking-[0.35em] uppercase mb-4">Get In Touch</p>
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-6">
-        Ready to Automate the Infinite?
+      <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-5 font-medium">Get In Touch</p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
+        Ready to Automate<br class="hidden sm:block" /> <span class="gradient-text">the Infinite?</span>
       </h2>
-      <p class="text-slate-400 mb-10 leading-relaxed max-w-lg mx-auto">
+      <p class="text-slate-400 mb-12 leading-relaxed max-w-lg mx-auto text-[15px]">
         We work with a select number of clients each quarter. Tell us about your workflows and we'll show you what's possible.
       </p>
       <a
         href="mailto:hello@aether8.ai"
-        class="group inline-flex items-center gap-3 bg-white text-[#0a0a12] font-bold px-10 py-4 rounded-full text-base hover:scale-105 transition-all duration-200 hover:shadow-[0_0_50px_rgba(0,243,255,0.45)]"
+        class="group inline-flex items-center gap-3 bg-white text-[#06060e] font-semibold px-10 py-4 rounded-full text-base cursor-pointer transition-all duration-300 hover:shadow-[0_0_50px_rgba(0,212,255,0.3)] hover:scale-[1.02]"
       >
         hello@aether8.ai
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -299,16 +339,32 @@ const year = new Date().getFullYear();
   </section>
 
   <!-- ── Footer ─────────────────────────────────────────────────────────────── -->
-  <footer class="border-t border-white/5 py-8 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-700">
-      <div class="font-mono tracking-wider">© {year} Aether8 AI Consulting Inc. · Ontario, Canada · Est. 2026</div>
-      <a href="mailto:hello@aether8.ai" class="hover:text-slate-400 transition-colors">hello@aether8.ai</a>
+  <footer class="border-t border-white/[0.04] py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-[11px] text-slate-700 tracking-[0.1em]">
+        &copy; {year} Aether8 AI Consulting Inc. · Ontario, Canada
+      </div>
+      <a href="mailto:hello@aether8.ai" class="text-[11px] text-slate-700 hover:text-slate-400 transition-colors cursor-pointer tracking-[0.1em]">
+        hello@aether8.ai
+      </a>
     </div>
   </footer>
 
 </Layout>
 
 <style>
+  /* ── Navigation scroll effect ── */
+  #nav {
+    backdrop-filter: blur(0px);
+    background: transparent;
+    transition: all 0.4s ease;
+  }
+  #nav.scrolled {
+    backdrop-filter: blur(16px);
+    background: rgba(6, 6, 14, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
   /* ── Logo wrapper & ambient animations ── */
   .logo-wrapper {
     position: relative;
@@ -319,21 +375,19 @@ const year = new Date().getFullYear();
     animation: fade-in-down 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
   }
 
-  /* Breathing ambient glow behind the logo */
   .logo-glow {
     position: absolute;
     inset: -30%;
     background: radial-gradient(ellipse 70% 55% at 50% 50%,
-      rgba(0, 243, 255, 0.18) 0%,
-      rgba(188, 19, 254, 0.10) 45%,
+      rgba(0, 212, 255, 0.12) 0%,
+      rgba(168, 85, 247, 0.06) 45%,
       transparent 70%);
     border-radius: 50%;
-    animation: glow-breathe 4s ease-in-out infinite;
+    animation: glow-breathe 5s ease-in-out infinite;
     pointer-events: none;
     z-index: 0;
   }
 
-  /* Outer rotating elliptical ring */
   .logo-ring {
     position: absolute;
     border-radius: 50%;
@@ -342,99 +396,106 @@ const year = new Date().getFullYear();
   }
   .logo-ring--outer {
     inset: -18%;
-    border: 1px dashed rgba(0, 243, 255, 0.18);
-    animation: ring-spin-cw 18s linear infinite;
+    border: 1px dashed rgba(0, 212, 255, 0.1);
+    animation: ring-spin-cw 20s linear infinite;
   }
   .logo-ring--inner {
     inset: -8%;
-    border: 1px solid rgba(188, 19, 254, 0.12);
-    animation: ring-spin-ccw 12s linear infinite;
+    border: 1px solid rgba(168, 85, 247, 0.07);
+    animation: ring-spin-ccw 14s linear infinite;
   }
 
-  /* Floating particles */
   .particle {
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
   }
-  .p1 { width: 3px; height: 3px; background: #00f3ff; top: 10%;  left: 8%;  animation: float-particle 5s ease-in-out 0s    infinite; box-shadow: 0 0 6px #00f3ff; }
-  .p2 { width: 2px; height: 2px; background: #bc13fe; top: 20%;  right: 6%; animation: float-particle 6s ease-in-out 1.2s  infinite; box-shadow: 0 0 6px #bc13fe; }
-  .p3 { width: 4px; height: 4px; background: #00f3ff; bottom: 15%; left: 12%; animation: float-particle 7s ease-in-out 0.6s  infinite; box-shadow: 0 0 8px #00f3ff; }
-  .p4 { width: 2px; height: 2px; background: #bc13fe; bottom: 25%; right: 10%; animation: float-particle 5.5s ease-in-out 2s  infinite; box-shadow: 0 0 6px #bc13fe; }
-  .p5 { width: 3px; height: 3px; background: #00f3ff; top: 50%;  left: 3%;  animation: float-particle 8s ease-in-out 0.4s  infinite; box-shadow: 0 0 6px #00f3ff; }
-  .p6 { width: 2px; height: 2px; background: #bc13fe; top: 60%;  right: 4%; animation: float-particle 6.5s ease-in-out 1.8s infinite; box-shadow: 0 0 6px #bc13fe; }
+  .p1 { width: 2px; height: 2px; background: var(--color-accent); top: 10%;  left: 8%;  animation: float-particle 6s ease-in-out 0s    infinite; box-shadow: 0 0 4px var(--color-accent); }
+  .p2 { width: 2px; height: 2px; background: var(--color-purple); top: 20%;  right: 6%; animation: float-particle 7s ease-in-out 1.2s  infinite; box-shadow: 0 0 4px var(--color-purple); }
+  .p3 { width: 3px; height: 3px; background: var(--color-accent); bottom: 15%; left: 12%; animation: float-particle 8s ease-in-out 0.6s  infinite; box-shadow: 0 0 6px var(--color-accent); }
+  .p4 { width: 2px; height: 2px; background: var(--color-purple); bottom: 25%; right: 10%; animation: float-particle 6.5s ease-in-out 2s  infinite; box-shadow: 0 0 4px var(--color-purple); }
+  .p5 { width: 2px; height: 2px; background: var(--color-accent); top: 50%;  left: 3%;  animation: float-particle 9s ease-in-out 0.4s  infinite; box-shadow: 0 0 4px var(--color-accent); }
+  .p6 { width: 2px; height: 2px; background: var(--color-purple); top: 60%;  right: 4%; animation: float-particle 7.5s ease-in-out 1.8s infinite; box-shadow: 0 0 4px var(--color-purple); }
 
-  /* The logo image */
   .hero-logo-img {
     position: relative;
     z-index: 1;
-    width: clamp(260px, 45vw, 520px);
+    width: clamp(240px, 40vw, 460px);
     height: auto;
-    animation: logo-shimmer 4s ease-in-out 1.1s infinite;
-    filter: drop-shadow(0 0 30px rgba(0, 243, 255, 0.25));
+    animation: logo-shimmer 5s ease-in-out 1.1s infinite;
+    filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.2));
   }
 
   .tagline {
     opacity: 0;
-    animation: fade-in-up 0.6s ease-out 0.9s forwards;
+    animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+  }
+
+  .hero-headline {
+    opacity: 0;
+    animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.1s forwards;
   }
 
   .description {
     opacity: 0;
-    animation: fade-in-up 0.6s ease-out 1.1s forwards;
+    animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.3s forwards;
   }
 
   .cta-group {
     opacity: 0;
-    animation: fade-in-up 0.6s ease-out 1.3s forwards;
+    animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.5s forwards;
   }
 
   .badge {
     opacity: 0;
-    animation: fade-in 0.6s ease-out 1.5s forwards;
-  }
-
-  /* ── Keyframes ── */
-
-  @keyframes fade-in-down {
-    from { opacity: 0; transform: translateY(-16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fade-in {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes glow-breathe {
-    0%, 100% { opacity: 0.7; transform: scale(0.95); }
-    50%       { opacity: 1;   transform: scale(1.08); }
-  }
-
-  @keyframes ring-spin-cw {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-
-  @keyframes ring-spin-ccw {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(-360deg); }
-  }
-
-  @keyframes float-particle {
-    0%, 100% { transform: translateY(0px);   opacity: 0.4; }
-    25%       { transform: translateY(-12px); opacity: 1;   }
-    75%       { transform: translateY(8px);   opacity: 0.6; }
-  }
-
-  @keyframes logo-shimmer {
-    0%, 100% { filter: drop-shadow(0 0 30px rgba(0, 243, 255, 0.25)); }
-    50%       { filter: drop-shadow(0 0 55px rgba(0, 243, 255, 0.5)) drop-shadow(0 0 90px rgba(188, 19, 254, 0.2)); }
+    animation: fade-in 0.7s ease-out 1.7s forwards;
   }
 </style>
+
+<script>
+  // Navbar scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav?.classList.add('scrolled');
+    } else {
+      nav?.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  let menuOpen = false;
+
+  toggle?.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    if (menuOpen) {
+      menu!.style.maxHeight = menu!.scrollHeight + 'px';
+      bar1!.style.transform = 'rotate(45deg) translate(2px, 2px)';
+      bar2!.style.opacity = '0';
+      bar3!.style.transform = 'rotate(-45deg) translate(2px, -2px)';
+      nav?.classList.add('scrolled');
+    } else {
+      menu!.style.maxHeight = '0';
+      bar1!.style.transform = '';
+      bar2!.style.opacity = '1';
+      bar3!.style.transform = '';
+    }
+  });
+
+  // Close mobile menu on nav link click
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOpen = false;
+      menu!.style.maxHeight = '0';
+      bar1!.style.transform = '';
+      bar2!.style.opacity = '1';
+      bar3!.style.transform = '';
+    });
+  });
+</script>
