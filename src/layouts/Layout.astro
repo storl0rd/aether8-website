@@ -1,18 +1,143 @@
 ---
 import "../styles/global.css";
 
-const { title } = Astro.props;
+interface Props {
+	title?: string;
+	description?: string;
+	ogImage?: string;
+}
+
+const {
+	title = "Aether8 AI Consulting | AI Consultants in London, Ontario",
+	description = "Aether8 AI Consulting Inc — forward-deployed agentic AI engineering for small and medium businesses in London, Ontario and across Canada. Custom AI solutions, workflow automation, and SRE-grade reliability.",
+	ogImage = "/logofinal-transparent.png",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? "https://aether8.ai");
+
+const localBusinessSchema = {
+	"@context": "https://schema.org",
+	"@type": "ProfessionalService",
+	"@id": "https://aether8.ai/#organization",
+	"name": "Aether8 AI Consulting Inc.",
+	"alternateName": "Aether8",
+	"url": "https://aether8.ai",
+	"logo": "https://aether8.ai/logofinal-transparent.png",
+	"image": "https://aether8.ai/logofinal-transparent.png",
+	"description": description,
+	"email": "hello@aether8.ai",
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "London",
+		"addressRegion": "ON",
+		"addressCountry": "CA"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": 42.9849,
+		"longitude": -81.2453
+	},
+	"areaServed": [
+		{
+			"@type": "City",
+			"name": "London",
+			"containedInPlace": { "@type": "AdministrativeArea", "name": "Ontario" }
+		},
+		{
+			"@type": "AdministrativeArea",
+			"name": "Ontario",
+			"containedInPlace": { "@type": "Country", "name": "Canada" }
+		},
+		{ "@type": "Country", "name": "Canada" }
+	],
+	"serviceType": [
+		"AI Consulting",
+		"Artificial Intelligence Consulting",
+		"Agentic AI Development",
+		"AI Workflow Automation",
+		"AI Integration Services",
+		"Machine Learning Consulting",
+		"AI Solutions for Small Business",
+		"Forward-Deployed AI Engineering"
+	],
+	"knowsAbout": [
+		"Artificial Intelligence",
+		"Agentic AI Systems",
+		"AI Automation",
+		"Machine Learning",
+		"Large Language Models",
+		"AI Observability",
+		"Site Reliability Engineering"
+	],
+	"priceRange": "$$",
+	"sameAs": []
+};
+
+const webpageSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": title,
+	"description": description,
+	"url": canonicalURL.href,
+	"isPartOf": { "@id": "https://aether8.ai/#website" },
+	"about": { "@id": "https://aether8.ai/#organization" },
+	"inLanguage": "en-CA"
+};
+
+const websiteSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"@id": "https://aether8.ai/#website",
+	"name": "Aether8 AI",
+	"url": "https://aether8.ai",
+	"publisher": { "@id": "https://aether8.ai/#organization" },
+	"inLanguage": "en-CA"
+};
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-CA" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Aether8 AI Consulting Inc - Intelligent Systems. Infinite Possibilities. Forward-deployed agentic engineering for small and medium businesses." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href={canonicalURL.href} />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Primary Meta -->
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="AI consulting London Ontario, AI consultant Ontario, artificial intelligence consulting Canada, agentic AI, AI automation small business, AI solutions Ontario, machine learning consultant London ON, forward-deployed AI engineering, AI workflow automation, AI integration services" />
+		<meta name="author" content="Aether8 AI Consulting Inc." />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Geographic Meta -->
+		<meta name="geo.region" content="CA-ON" />
+		<meta name="geo.placename" content="London, Ontario" />
+		<meta name="geo.position" content="42.9849;-81.2453" />
+		<meta name="ICBM" content="42.9849, -81.2453" />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL.href} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(ogImage, Astro.site ?? "https://aether8.ai").href} />
+		<meta property="og:site_name" content="Aether8 AI" />
+		<meta property="og:locale" content="en_CA" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(ogImage, Astro.site ?? "https://aether8.ai").href} />
+
+		<!-- Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(webpageSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
