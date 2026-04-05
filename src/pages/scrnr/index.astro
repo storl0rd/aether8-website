@@ -1,0 +1,239 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const year = new Date().getFullYear();
+---
+
+<Layout
+  title="Scrnr — AI Contact Pre-Screening & Data Hygiene | Aether8"
+  description="Scrnr automates contact verification, intelligent pre-screening, and lead routing for B2C businesses. Only qualified, reachable customers reach your team."
+>
+
+  <!-- ── Nav ───────────────────────────────────────────────────────────────────── -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-6xl mx-auto px-6">
+      <nav class="flex items-center justify-between h-16 border-b border-white/[0.04]">
+        <a href="https://aether8.ai" class="flex items-center gap-2 group">
+          <span class="text-[13px] font-semibold tracking-[0.25em] uppercase text-white/90">
+            AETHER<span class="text-[var(--color-accent)]">8</span><span class="text-white/30">.ai</span>
+          </span>
+        </a>
+        <div class="flex items-center gap-4">
+          <a
+            href="mailto:hello@aether8.ai?subject=Scrnr Waitlist"
+            class="text-[11px] tracking-[0.15em] uppercase border border-emerald-500/30 text-emerald-400/80 px-5 py-2 rounded-full hover:border-emerald-500 hover:text-emerald-400 hover:bg-emerald-500/5 transition-all duration-300"
+          >Join Waitlist</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────────────── -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16 relative overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-emerald-500/[0.04] rounded-full blur-[130px]" style="animation: glow-breathe 8s ease-in-out infinite;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <!-- Status badge -->
+      <div class="inline-flex items-center gap-2 text-[10px] text-amber-400/70 tracking-[0.2em] uppercase border border-amber-400/15 bg-amber-400/[0.04] px-4 py-2 rounded-full mb-6 animate-fade-up">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+        Early Access · By Aether8
+      </div>
+
+      <!-- Wordmark -->
+      <h1 class="text-6xl md:text-8xl font-extrabold tracking-[0.05em] mb-4 animate-fade-up delay-1" style="background: linear-gradient(135deg, #34d399, #00d4ff, #34d399); background-size: 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-shift 6s ease-in-out infinite, fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;">
+        SCRNR
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-xl md:text-2xl text-white/80 font-light leading-snug mb-4 animate-fade-up delay-2">
+        Stop paying people to call contacts who moved two years ago.
+      </p>
+
+      <!-- Description -->
+      <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 animate-fade-up delay-3">
+        AI-powered contact verification, pre-screening flows, and lead routing for B2C businesses. Only qualified, reachable customers reach your team.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up delay-4">
+        <a
+          href="mailto:hello@aether8.ai?subject=Scrnr Waitlist"
+          class="group inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_30px_rgba(52,211,153,0.15)]"
+        >
+          Join the Waitlist
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 px-7 py-3.5 rounded-full text-sm font-medium tracking-wide hover:border-white/30 hover:text-white transition-all duration-300"
+        >
+          See How It Works ↓
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-up delay-5">
+      <div class="w-px h-12 bg-gradient-to-b from-transparent to-white/20 mx-auto"></div>
+    </div>
+  </section>
+
+  <!-- ── Problem Statement ──────────────────────────────────────────────────────── -->
+  <section class="py-32 px-6">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="glass-card rounded-2xl p-10 md:p-14 reveal relative overflow-hidden" style="border-left: 2px solid rgba(52,211,153,0.3);">
+        <div class="absolute top-0 right-0 w-[400px] h-[250px] bg-emerald-500/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="relative z-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 leading-tight">
+            25% of your contact database is unreachable right now.
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div class="text-3xl font-extrabold text-emerald-400 mb-2">~25%</div>
+              <p class="text-slate-400 text-[14px] leading-relaxed">Average annual contact decay rate. Phone numbers, emails, and addresses go stale faster than most teams realise.</p>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-emerald-400 mb-2">35%</div>
+              <p class="text-slate-400 text-[14px] leading-relaxed">Of outreach budget wasted on undeliverable contacts in a typical B2C database</p>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-emerald-400 mb-2">$25/hr</div>
+              <p class="text-slate-400 text-[14px] leading-relaxed">Average cost of manual pre-screening staff doing work that Scrnr handles automatically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── How It Works / Teased Benefits ────────────────────────────────────────── -->
+  <section id="how-it-works" class="py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-emerald-400/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">What's Coming</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Three problems. One AI deployment.</h2>
+        <p class="text-slate-400 mt-4 max-w-xl mx-auto leading-relaxed">Built for home services, healthcare, fitness, real estate, and any business managing a large B2C contact base.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Benefit 1 -->
+        <div class="glass-card rounded-2xl p-8 reveal relative overflow-hidden group">
+          <div class="absolute top-4 right-4">
+            <span class="text-[10px] text-slate-500 tracking-[0.15em] uppercase border border-white/8 bg-white/[0.03] px-2.5 py-1 rounded-full">Coming Soon</span>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">AI Contact Verification</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Phone, email, and address validated before your team touches the contact. Dead records suppressed automatically. Clean data in, clean data out.</p>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">Phone</span>
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">Email</span>
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">Address</span>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="glass-card rounded-2xl p-8 reveal relative overflow-hidden group">
+          <div class="absolute top-4 right-4">
+            <span class="text-[10px] text-slate-500 tracking-[0.15em] uppercase border border-white/8 bg-white/[0.03] px-2.5 py-1 rounded-full">Coming Soon</span>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Intelligent Pre-Screening</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Consumers answer a short AI-driven qualification questionnaire, customised to your business type. Only qualified leads reach your queue.</p>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">SMS</span>
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">Web Form</span>
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">CASL Compliant</span>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="glass-card rounded-2xl p-8 reveal relative overflow-hidden group">
+          <div class="absolute top-4 right-4">
+            <span class="text-[10px] text-slate-500 tracking-[0.15em] uppercase border border-white/8 bg-white/[0.03] px-2.5 py-1 rounded-full">Coming Soon</span>
+          </div>
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Automated Lead Routing</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Greenlit contacts go straight to your calendar or CRM queue. Stale contacts go to nurture or suppression. Zero manual triage. Full audit trail.</p>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">CRM Sync</span>
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">Auto-Route</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Waitlist CTA ───────────────────────────────────────────────────────────── -->
+  <section class="py-32 px-6 relative overflow-hidden">
+    <div class="accent-line max-w-6xl mx-auto mb-32"></div>
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/[0.04] rounded-full blur-[100px]"></div>
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center reveal">
+      <p class="text-emerald-400/70 text-[11px] tracking-[0.35em] uppercase mb-6 font-medium">Early Access</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
+        Built for high-volume B2C businesses<br class="hidden sm:block" /> that can't afford bad data.
+      </h2>
+      <p class="text-slate-400 leading-relaxed mb-3 max-w-lg mx-auto">
+        Home services. Dental &amp; medspa. Fitness studios. Mortgage &amp; insurance brokers. If you're working a large consumer contact base, Scrnr is built for you.
+      </p>
+      <p class="text-slate-600 text-[13px] mb-3">Each deployment is configured to your database size, workflow, and CRM.</p>
+      <p class="text-emerald-400/50 text-[13px] mb-10">Free contact health check included for all early access partners.</p>
+      <a
+        href="mailto:hello@aether8.ai?subject=Scrnr Waitlist"
+        class="group inline-flex items-center gap-2 bg-white text-[#06060e] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_30px_rgba(52,211,153,0.15)]"
+      >
+        Join the Waitlist
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────────────── -->
+  <footer class="py-12 px-6 border-t border-white/[0.04]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-500 text-[13px]">Part of the Aether8 product suite</p>
+      <div class="flex items-center gap-6 text-[13px]">
+        <a href="https://pursuit.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Pursuit</a>
+        <a href="https://showwalker.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Showwalker</a>
+        <a href="https://aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">aether8.ai</a>
+      </div>
+      <p class="text-slate-600 text-[13px]">&copy; {year} Aether8 AI Consulting Inc.</p>
+    </div>
+  </footer>
+
+  <style>
+    #nav.scrolled {
+      background: rgba(6, 6, 14, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    /* Product-specific hover glow: emerald for Scrnr */
+    .glass-card:hover {
+      box-shadow: 0 8px 40px -12px rgba(52, 211, 153, 0.12);
+    }
+  </style>
+
+  <script is:inline>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+  </script>
+
+</Layout>

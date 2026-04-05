@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "pursuit.aether8.ai" }],
+      "destination": "/pursuit/$1"
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "showwalker.aether8.ai" }],
+      "destination": "/showwalker/$1"
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "scrnr.aether8.ai" }],
+      "destination": "/scrnr/$1"
+    }
+  ]
+}

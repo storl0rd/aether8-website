@@ -6,7 +6,7 @@ const year = new Date().getFullYear();
 
 <Layout
   title="Aether8 AI Consulting | AI Consultants in London, Ontario | Agentic AI Solutions"
-  description="Aether8 AI Consulting Inc — forward-deployed agentic AI engineering for small and medium businesses in London, Ontario and across Canada. Custom AI solutions, workflow automation, and SRE-grade reliability."
+  description="Aether8 AI Consulting Inc. Forward-deployed agentic AI engineering for small and medium businesses in London, Ontario and across Canada. Custom AI solutions, workflow automation, and SRE-grade reliability."
 >
 
   <!-- ── Navigation ─────────────────────────────────────────────────────────── -->
@@ -264,55 +264,86 @@ const year = new Date().getFullYear();
     <div class="accent-line max-w-6xl mx-auto mb-32"></div>
     <div class="max-w-6xl mx-auto">
 
-      <div class="text-center mb-16">
-        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">Coming Soon</p>
-        <h2 class="text-3xl md:text-[2.75rem] font-bold tracking-tight">Our Products</h2>
+      <div class="text-center mb-16 reveal">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">Our Products</p>
+        <h2 class="text-3xl md:text-[2.75rem] font-bold tracking-tight">Find, win, and keep the right customers.</h2>
+        <p class="text-slate-400 mt-4 max-w-xl mx-auto leading-relaxed">Three focused tools. One customer lifecycle. Every deployment tailored to your business.</p>
       </div>
 
-      <!-- PURSUIT teaser card -->
-      <div class="border-gradient rounded-2xl overflow-hidden">
-        <div class="glass-card rounded-2xl p-10 md:p-14 flex flex-col md:flex-row items-center gap-10 relative !border-0">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <!-- Ambient glow -->
-          <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-1/4 w-[500px] h-[200px] bg-[var(--color-accent)]/[0.03] rounded-full blur-[100px]"></div>
-            <div class="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-[var(--color-purple)]/[0.03] rounded-full blur-[100px]"></div>
-          </div>
-
-          <!-- Left: wordmark + meta -->
-          <div class="relative z-10 flex flex-col items-center md:items-start text-center md:text-left shrink-0">
-            <div class="text-5xl md:text-6xl font-extrabold tracking-[0.05em] gradient-text mb-5">
-              PURSUIT
+        <!-- Pursuit -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col gap-6 relative overflow-hidden reveal group">
+          <div class="absolute top-0 left-0 w-[300px] h-[150px] bg-[var(--color-accent)]/[0.04] rounded-full blur-[80px] pointer-events-none"></div>
+          <div class="relative z-10">
+            <div class="text-3xl font-extrabold tracking-[0.05em] gradient-text mb-3">PURSUIT</div>
+            <div class="inline-flex items-center gap-2 text-[10px] text-emerald-400/80 tracking-[0.2em] uppercase border border-emerald-400/20 bg-emerald-400/[0.05] px-3 py-1.5 rounded-full mb-4">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              Live
             </div>
-            <div class="inline-flex items-center gap-2.5 text-[10px] text-amber-400/70 tracking-[0.2em] uppercase border border-amber-400/15 bg-amber-400/[0.04] px-4 py-2 rounded-full">
+            <p class="text-white/70 text-[15px] leading-relaxed mb-5">The AI research agent your SDRs wish they had. Less research, more selling.</p>
+            <ul class="flex flex-col gap-2 mb-6">
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-[var(--color-accent)] mt-1.5 shrink-0 inline-block"></span>AI prospect research &amp; scoring</li>
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-[var(--color-accent)] mt-1.5 shrink-0 inline-block"></span>Personalised outreach drafts</li>
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-[var(--color-accent)] mt-1.5 shrink-0 inline-block"></span>CRM-ready export</li>
+            </ul>
+          </div>
+          <div class="relative z-10 mt-auto flex flex-col gap-3">
+            <a href="https://pursuit.aether8.ai" class="group/btn inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-5 py-2.5 rounded-full text-[13px] font-semibold tracking-wide hover:bg-[var(--color-accent)] transition-all duration-300">
+              Talk to Us
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/btn:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Showwalker -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col gap-6 relative overflow-hidden reveal group">
+          <div class="absolute top-0 right-0 w-[300px] h-[150px] bg-[var(--color-purple)]/[0.04] rounded-full blur-[80px] pointer-events-none"></div>
+          <div class="relative z-10">
+            <div class="text-3xl font-extrabold tracking-[0.05em] mb-3" style="background: linear-gradient(135deg, #a855f7, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">SHOWWALKER</div>
+            <div class="inline-flex items-center gap-2 text-[10px] text-amber-400/70 tracking-[0.2em] uppercase border border-amber-400/15 bg-amber-400/[0.04] px-3 py-1.5 rounded-full mb-4">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
               Early Access
             </div>
+            <p class="text-white/70 text-[15px] leading-relaxed mb-5">Turn any tradeshow exhibitor list into a scored, qualified lead pipeline. Minutes, not days.</p>
+            <ul class="flex flex-col gap-2 mb-6">
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-[var(--color-purple)] mt-1.5 shrink-0 inline-block"></span>Research &amp; score every exhibitor</li>
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-[var(--color-purple)] mt-1.5 shrink-0 inline-block"></span>Custom keyword scoring model</li>
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-[var(--color-purple)] mt-1.5 shrink-0 inline-block"></span>One-click CRM push</li>
+            </ul>
           </div>
-
-          <!-- Divider -->
-          <div class="hidden md:block w-px self-stretch bg-white/[0.06] shrink-0"></div>
-
-          <!-- Right: abstract description + CTA -->
-          <div class="relative z-10 flex flex-col gap-5 flex-1">
-            <p class="text-white/80 text-lg leading-relaxed font-light">
-              An agentic system purpose-built to eliminate the manual overhead between opportunity and close.
-            </p>
-            <p class="text-slate-500 leading-relaxed text-[15px]">
-              PURSUIT is currently in private development. We're working with a select group of early partners to shape the product. If you're curious, reach out - we'll share more under NDA.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-3 mt-3">
-              <a
-                href="mailto:hello@aether8.ai?subject=PURSUIT - Early Access Inquiry"
-                class="group inline-flex items-center gap-2 border border-white/10 text-white/80 px-6 py-3 rounded-full text-sm font-medium tracking-wide hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5 transition-all duration-300 cursor-pointer"
-              >
-                Request Early Access
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-            </div>
+          <div class="relative z-10 mt-auto flex flex-col gap-3">
+            <a href="https://showwalker.aether8.ai" class="group/btn inline-flex items-center justify-center gap-2 border border-[var(--color-purple)]/30 text-white/80 px-5 py-2.5 rounded-full text-[13px] font-medium tracking-wide hover:border-[var(--color-purple)]/60 hover:text-[var(--color-purple)] hover:bg-[var(--color-purple)]/5 transition-all duration-300">
+              Request Access
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/btn:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
           </div>
-
         </div>
+
+        <!-- Scrnr -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col gap-6 relative overflow-hidden reveal group">
+          <div class="absolute bottom-0 left-0 w-[300px] h-[150px] bg-emerald-500/[0.04] rounded-full blur-[80px] pointer-events-none"></div>
+          <div class="relative z-10">
+            <div class="text-3xl font-extrabold tracking-[0.05em] mb-3" style="background: linear-gradient(135deg, #34d399, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">SCRNR</div>
+            <div class="inline-flex items-center gap-2 text-[10px] text-amber-400/70 tracking-[0.2em] uppercase border border-amber-400/15 bg-amber-400/[0.04] px-3 py-1.5 rounded-full mb-4">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              Early Access
+            </div>
+            <p class="text-white/70 text-[15px] leading-relaxed mb-5">Stop paying people to call contacts who moved two years ago. AI-powered contact hygiene and pre-screening.</p>
+            <ul class="flex flex-col gap-2 mb-6">
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-emerald-400 mt-1.5 shrink-0 inline-block"></span>AI contact verification</li>
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-emerald-400 mt-1.5 shrink-0 inline-block"></span>Intelligent pre-screening flows</li>
+              <li class="flex items-start gap-2 text-slate-400 text-[13px]"><span class="w-1 h-1 rounded-full bg-emerald-400 mt-1.5 shrink-0 inline-block"></span>CRM-ready lead routing</li>
+            </ul>
+          </div>
+          <div class="relative z-10 mt-auto flex flex-col gap-3">
+            <a href="https://scrnr.aether8.ai" class="group/btn inline-flex items-center justify-center gap-2 border border-emerald-500/30 text-white/80 px-5 py-2.5 rounded-full text-[13px] font-medium tracking-wide hover:border-emerald-500/60 hover:text-emerald-400 hover:bg-emerald-500/5 transition-all duration-300">
+              Join Waitlist
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/btn:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
       </div>
 
     </div>

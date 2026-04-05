@@ -1,0 +1,237 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const year = new Date().getFullYear();
+---
+
+<Layout
+  title="Pursuit — AI Sales Research Agent | Aether8"
+  description="Pursuit is an AI-powered sales research agent that maps your ICP, surfaces decision-makers, and drafts personalised outreach. Your team spends their time selling, not searching."
+>
+
+  <!-- ── Nav ───────────────────────────────────────────────────────────────────── -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-6xl mx-auto px-6">
+      <nav class="flex items-center justify-between h-16 border-b border-white/[0.04]">
+        <a href="https://aether8.ai" class="flex items-center gap-2 group">
+          <span class="text-[13px] font-semibold tracking-[0.25em] uppercase text-white/90">
+            AETHER<span class="text-[var(--color-accent)]">8</span><span class="text-white/30">.ai</span>
+          </span>
+        </a>
+        <div class="flex items-center gap-4">
+          <a href="#features" class="hidden md:block px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300">Features</a>
+          <a href="#how-it-works" class="hidden md:block px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300">How It Works</a>
+          <a
+            href="mailto:hello@aether8.ai?subject=Pursuit — Let's Talk"
+            class="text-[11px] tracking-[0.15em] uppercase border border-[var(--color-accent)]/30 text-[var(--color-accent)]/80 px-5 py-2 rounded-full hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5 transition-all duration-300"
+          >Talk to Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────────────── -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16 relative overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[var(--color-accent)]/[0.04] rounded-full blur-[120px]" style="animation: glow-breathe 6s ease-in-out infinite;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <!-- Status badge -->
+      <div class="inline-flex items-center gap-2 text-[10px] text-emerald-400/80 tracking-[0.2em] uppercase border border-emerald-400/20 bg-emerald-400/[0.05] px-4 py-2 rounded-full mb-6 animate-fade-up">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        Live · By Aether8
+      </div>
+
+      <!-- Wordmark -->
+      <h1 class="text-6xl md:text-8xl font-extrabold tracking-[0.05em] gradient-text mb-4 animate-fade-up delay-1">
+        PURSUIT
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-xl md:text-2xl text-white/80 font-light leading-snug mb-4 animate-fade-up delay-2">
+        The AI research agent built for B2B sales teams.
+      </p>
+
+      <!-- Description -->
+      <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 animate-fade-up delay-3">
+        Stop spending hours on research before every outbound sequence. Pursuit maps your ICP, surfaces decision-makers, and drafts personalised outreach. Your team stays focused on selling.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up delay-4">
+        <a
+          href="mailto:hello@aether8.ai?subject=Pursuit — Let's Talk"
+          class="group inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-[var(--color-accent)] transition-all duration-300 shadow-[0_0_30px_rgba(0,212,255,0.15)]"
+        >
+          Talk to Us
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 px-7 py-3.5 rounded-full text-sm font-medium tracking-wide hover:border-white/30 hover:text-white transition-all duration-300"
+        >
+          See How It Works ↓
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-up delay-5">
+      <div class="w-px h-12 bg-gradient-to-b from-transparent to-white/20"></div>
+    </div>
+  </section>
+
+  <!-- ── Features ───────────────────────────────────────────────────────────────── -->
+  <section id="features" class="py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">What Pursuit Does</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Built to eliminate sales research overhead.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Feature 1: Prospect Research -->
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Deep Prospect Research</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Company intelligence, technology footprint, recent news, funding history, and decision-maker mapping. All assembled automatically for each target account.</p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="text-[11px] text-[var(--color-accent)]/60 tracking-[0.15em] uppercase border border-[var(--color-accent)]/15 bg-[var(--color-accent)]/[0.04] px-3 py-1 rounded-full">Account Intel</span>
+            <span class="text-[11px] text-[var(--color-accent)]/60 tracking-[0.15em] uppercase border border-[var(--color-accent)]/15 bg-[var(--color-accent)]/[0.04] px-3 py-1 rounded-full">Lead Scoring</span>
+          </div>
+        </div>
+
+        <!-- Feature 2: Outreach Drafts -->
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-purple)]/10 border border-[var(--color-purple)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Personalised Outreach Drafts</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">First-draft emails tailored to each prospect in seconds, referencing their company, role, and recent signals. Your reps review and send, not start from scratch.</p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">Email Copy</span>
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">Signal-Based</span>
+          </div>
+        </div>
+
+        <!-- Feature 3: CRM Export -->
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">CRM-Ready Output</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Contacts, enriched company data, and research notes pushed directly to your CRM. No copy-paste, no data entry.</p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">HubSpot</span>
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">Close</span>
+            <span class="text-[11px] text-emerald-400/60 tracking-[0.15em] uppercase border border-emerald-400/15 bg-emerald-400/[0.04] px-3 py-1 rounded-full">CSV</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ───────────────────────────────────────────────────────────── -->
+  <section id="how-it-works" class="py-32 px-6 relative">
+    <div class="accent-line max-w-6xl mx-auto mb-32"></div>
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">The Process</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">From ICP to inbox in minutes.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+
+        <!-- Step connector line (desktop only) -->
+        <div class="hidden md:block absolute top-8 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"></div>
+
+        <!-- Step 1 -->
+        <div class="glass-card rounded-2xl p-8 reveal text-center">
+          <div class="text-5xl font-extrabold gradient-text mb-4 leading-none">01</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Define Your ICP</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">Tell Pursuit your ideal customer profile: industry, company size, role, region, and the signals that matter most to your team.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card rounded-2xl p-8 reveal text-center">
+          <div class="text-5xl font-extrabold gradient-text mb-4 leading-none">02</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Pursuit Researches &amp; Scores</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">AI agents map matching accounts, enrich contacts, score each prospect, and generate personalised outreach drafts. Automatically.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card rounded-2xl p-8 reveal text-center">
+          <div class="text-5xl font-extrabold gradient-text mb-4 leading-none">03</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Review &amp; Launch</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">Your team reviews the scored list and draft emails, makes any edits, and launches the sequence. CRM synced automatically.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing ────────────────────────────────────────────────────────────────── -->
+  <section class="py-32 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="glass-card rounded-2xl p-10 md:p-14 text-center relative overflow-hidden reveal" style="border-color: rgba(0,212,255,0.12);">
+        <!-- Glow -->
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[var(--color-accent)]/[0.04] rounded-full blur-[80px]"></div>
+        </div>
+        <div class="relative z-10">
+          <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-6 font-medium">Pricing</p>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4">Every deployment is built for you.</h2>
+          <p class="text-slate-400 leading-relaxed mb-3 max-w-lg mx-auto">
+            Pursuit is a foundational platform, not a generic SaaS product. We configure each instance to your ICP, workflow, and CRM. No two deployments are identical.
+          </p>
+          <p class="text-slate-500 text-[14px] mb-10">Pricing reflects the engagement, not a seat count.</p>
+          <a
+            href="mailto:hello@aether8.ai?subject=Pursuit — Let's Talk"
+            class="group inline-flex items-center gap-2 bg-white text-[#06060e] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-[var(--color-accent)] transition-all duration-300 shadow-[0_0_30px_rgba(0,212,255,0.15)]"
+          >
+            Talk to Us
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────────────── -->
+  <footer class="py-12 px-6 border-t border-white/[0.04]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-500 text-[13px]">Part of the Aether8 product suite</p>
+      <div class="flex items-center gap-6 text-[13px]">
+        <a href="https://showwalker.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Showwalker</a>
+        <a href="https://scrnr.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Scrnr</a>
+        <a href="https://aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">aether8.ai</a>
+      </div>
+      <p class="text-slate-600 text-[13px]">&copy; {year} Aether8 AI Consulting Inc.</p>
+    </div>
+  </footer>
+
+  <style>
+    #nav.scrolled {
+      background: rgba(6, 6, 14, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+  </style>
+
+  <script is:inline>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+  </script>
+
+</Layout>

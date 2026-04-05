@@ -1,0 +1,278 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const year = new Date().getFullYear();
+---
+
+<Layout
+  title="Showwalker — AI Tradeshow Intelligence | Aether8"
+  description="Showwalker turns any tradeshow exhibitor list into a scored, qualified lead pipeline. Researched, keyword-matched, and pushed to your CRM automatically."
+>
+
+  <!-- ── Nav ───────────────────────────────────────────────────────────────────── -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-6xl mx-auto px-6">
+      <nav class="flex items-center justify-between h-16 border-b border-white/[0.04]">
+        <a href="https://aether8.ai" class="flex items-center gap-2 group">
+          <span class="text-[13px] font-semibold tracking-[0.25em] uppercase text-white/90">
+            AETHER<span class="text-[var(--color-accent)]">8</span><span class="text-white/30">.ai</span>
+          </span>
+        </a>
+        <div class="flex items-center gap-4">
+          <a href="#how-it-works" class="hidden md:block px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300">How It Works</a>
+          <a
+            href="mailto:hello@aether8.ai?subject=Showwalker — Let's Talk"
+            class="text-[11px] tracking-[0.15em] uppercase border border-[var(--color-purple)]/30 text-[var(--color-purple)]/80 px-5 py-2 rounded-full hover:border-[var(--color-purple)] hover:text-[var(--color-purple)] hover:bg-[var(--color-purple)]/5 transition-all duration-300"
+          >Talk to Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────────────── -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16 relative overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[var(--color-purple)]/[0.05] rounded-full blur-[120px]" style="animation: glow-breathe 7s ease-in-out infinite;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <!-- Status badge -->
+      <div class="inline-flex items-center gap-2 text-[10px] text-amber-400/70 tracking-[0.2em] uppercase border border-amber-400/15 bg-amber-400/[0.04] px-4 py-2 rounded-full mb-6 animate-fade-up">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+        Early Access · By Aether8
+      </div>
+
+      <!-- Wordmark -->
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-[0.04em] mb-4 animate-fade-up delay-1" style="background: linear-gradient(135deg, #a855f7, #00d4ff, #a855f7); background-size: 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-shift 6s ease-in-out infinite, fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;">
+        SHOWWALKER
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-xl md:text-2xl text-white/80 font-light leading-snug mb-4 animate-fade-up delay-2">
+        Turn any tradeshow into a qualified lead pipeline.
+      </p>
+
+      <!-- Description -->
+      <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 animate-fade-up delay-3">
+        Paste a tradeshow exhibitor URL. Showwalker collects every exhibitor, researches their business, scores them against your criteria, and surfaces the ones worth pursuing. Push to your CRM with one click.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up delay-4">
+        <a
+          href="mailto:hello@aether8.ai?subject=Showwalker — Let's Talk"
+          class="group inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-[var(--color-purple)] hover:text-white transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.15)]"
+        >
+          Talk to Us
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center justify-center gap-2 border border-white/10 text-white/70 px-7 py-3.5 rounded-full text-sm font-medium tracking-wide hover:border-white/30 hover:text-white transition-all duration-300"
+        >
+          See How It Works ↓
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-up delay-5">
+      <div class="w-px h-12 bg-gradient-to-b from-transparent to-white/20 mx-auto"></div>
+    </div>
+  </section>
+
+  <!-- ── Problem ────────────────────────────────────────────────────────────────── -->
+  <section class="py-32 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="glass-card rounded-2xl p-10 md:p-14 reveal relative overflow-hidden" style="border-left: 2px solid rgba(168,85,247,0.3);">
+        <div class="absolute top-0 right-0 w-[400px] h-[250px] bg-[var(--color-purple)]/[0.03] rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="relative z-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+            Tradeshows are full of leads.<br class="hidden sm:block"/> Most teams leave with a badge scanner and a pile of business cards.
+          </h2>
+          <p class="text-slate-400 leading-relaxed mb-8 text-[15px] max-w-2xl">
+            Manually researching hundreds of exhibitors takes days. Most never get properly evaluated. The ones that do get lost in spreadsheets before anyone follows up. Showwalker eliminates that entire workflow.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div class="text-3xl font-extrabold text-[var(--color-purple)] mb-2">500+</div>
+              <p class="text-slate-400 text-[14px] leading-relaxed">Exhibitors at a typical mid-size B2B tradeshow. Far too many to research manually before the show ends.</p>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-[var(--color-purple)] mb-2">~2 days</div>
+              <p class="text-slate-400 text-[14px] leading-relaxed">Time a typical team spends manually shortlisting exhibitors from a single show's catalogue</p>
+            </div>
+            <div>
+              <div class="text-3xl font-extrabold text-[var(--color-purple)] mb-2">1 click</div>
+              <p class="text-slate-400 text-[14px] leading-relaxed">What it takes to push a qualified Showwalker lead into HubSpot, ready for follow-up</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ───────────────────────────────────────────────────────────── -->
+  <section id="how-it-works" class="py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-[var(--color-purple)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">Three-Phase Process</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">From exhibitor list URL to scored pipeline in minutes.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+
+        <!-- Step connector line (desktop only) -->
+        <div class="hidden md:block absolute top-8 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-gradient-to-r from-transparent via-[var(--color-purple)]/20 to-transparent pointer-events-none"></div>
+
+        <!-- Phase 1: Extract -->
+        <div class="glass-card rounded-2xl p-8 reveal text-center">
+          <div class="text-5xl font-extrabold mb-4 leading-none" style="background: linear-gradient(135deg, #a855f7, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">01</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Extract</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">Paste any tradeshow exhibitor page URL. Showwalker collects every exhibitor's name, booth number, description, and categories from the show portal. Works across all major portal formats, including dynamic and embedded layouts.</p>
+          <div class="flex flex-wrap gap-2 mt-5 justify-center">
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">Any Portal</span>
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">All Formats</span>
+          </div>
+        </div>
+
+        <!-- Phase 2: Discover -->
+        <div class="glass-card rounded-2xl p-8 reveal text-center">
+          <div class="text-5xl font-extrabold mb-4 leading-none" style="background: linear-gradient(135deg, #a855f7, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">02</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Discover</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">For each exhibitor, Showwalker finds and visits the company's real website, extracting full content directly from the source. The scoring engine works from what the company actually says about itself, not just what the show portal lists.</p>
+          <div class="flex flex-wrap gap-2 mt-5 justify-center">
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">Deep Research</span>
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">Company Intel</span>
+          </div>
+        </div>
+
+        <!-- Phase 3: Score -->
+        <div class="glass-card rounded-2xl p-8 reveal text-center">
+          <div class="text-5xl font-extrabold mb-4 leading-none" style="background: linear-gradient(135deg, #a855f7, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">03</div>
+          <h3 class="text-white font-semibold text-lg mb-3">Score &amp; Route</h3>
+          <p class="text-slate-400 text-[15px] leading-relaxed">Each exhibitor is scored 0–100 against your keyword model, broken down by weighted category. Sort by score, search by name, and rescore with updated criteria at any time. Push qualified leads to your CRM with one click.</p>
+          <div class="flex flex-wrap gap-2 mt-5 justify-center">
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">0–100 Score</span>
+            <span class="text-[11px] text-[var(--color-purple)]/60 tracking-[0.15em] uppercase border border-[var(--color-purple)]/15 bg-[var(--color-purple)]/[0.04] px-3 py-1 rounded-full">HubSpot Push</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ───────────────────────────────────────────────────────────────── -->
+  <section class="py-32 px-6">
+    <div class="accent-line max-w-6xl mx-auto mb-32"></div>
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-[var(--color-purple)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">Capabilities</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Built for teams who live at tradeshows.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Feature: Custom Scoring Model -->
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-purple)]/10 border border-[var(--color-purple)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Custom Scoring Model</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Define your own keyword categories and weights, each contributing to a 0–100 total score. Built-in keyword discovery surfaces terms from the actual exhibitor content that you may have missed. Rescore the entire run instantly with updated criteria.</p>
+        </div>
+
+        <!-- Feature: Contact Enrichment -->
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-purple)]/10 border border-[var(--color-purple)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Contact Enrichment</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">AI-powered contact enrichment surfaces decision-maker names, titles, emails, phone numbers, and LinkedIn profiles for each exhibitor. Enrich individually or batch-enrich your highest-scoring exhibitors in one run.</p>
+        </div>
+
+        <!-- Feature: One-Click CRM Push -->
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-purple)]/10 border border-[var(--color-purple)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">One-Click CRM Push</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Push any qualified exhibitor to your CRM as a company and deal in one click. Contacts sync with full details and deals land in your configured pipeline stage, ready for immediate follow-up. Safe to push more than once.</p>
+        </div>
+
+        <!-- Feature: Production-grade scraping -->
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-purple)]/10 border border-[var(--color-purple)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Works Across Every Show Portal</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Showwalker works across every major show portal format, handling dynamic content, embedded widgets, and paginated layouts automatically. Only real exhibitor data is collected. Tested on 1,400+ exhibitor runs across multiple shows.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing / CTA ──────────────────────────────────────────────────────────── -->
+  <section class="py-32 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[var(--color-purple)]/[0.04] rounded-full blur-[100px]"></div>
+    </div>
+    <div class="max-w-2xl mx-auto">
+      <div class="glass-card rounded-2xl p-10 md:p-14 text-center relative overflow-hidden reveal" style="border-color: rgba(168,85,247,0.12);">
+        <div class="relative z-10">
+          <p class="text-[var(--color-purple)]/70 text-[11px] tracking-[0.35em] uppercase mb-6 font-medium">Deployment</p>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4">Configured for your industry and your CRM.</h2>
+          <p class="text-slate-400 leading-relaxed mb-3 max-w-lg mx-auto">
+            Showwalker ships with a default scoring model but every deployment is configured to your industry's qualification criteria, your pipeline stages, and your team's workflow.
+          </p>
+          <p class="text-slate-500 text-[14px] mb-10">Pricing reflects the engagement. No seat counts, no tiers.</p>
+          <a
+            href="mailto:hello@aether8.ai?subject=Showwalker — Let's Talk"
+            class="group inline-flex items-center gap-2 bg-white text-[#06060e] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-[var(--color-purple)] hover:text-white transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.15)]"
+          >
+            Talk to Us
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────────────── -->
+  <footer class="py-12 px-6 border-t border-white/[0.04]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-500 text-[13px]">Part of the Aether8 product suite</p>
+      <div class="flex items-center gap-6 text-[13px]">
+        <a href="https://pursuit.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Pursuit</a>
+        <a href="https://scrnr.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Scrnr</a>
+        <a href="https://aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">aether8.ai</a>
+      </div>
+      <p class="text-slate-600 text-[13px]">&copy; {year} Aether8 AI Consulting Inc.</p>
+    </div>
+  </footer>
+
+  <style>
+    #nav.scrolled {
+      background: rgba(6, 6, 14, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    /* Product-specific hover glow: purple for Showwalker */
+    .glass-card:hover {
+      box-shadow: 0 8px 40px -12px rgba(168, 85, 247, 0.12);
+    }
+  </style>
+
+  <script is:inline>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+  </script>
+
+</Layout>
