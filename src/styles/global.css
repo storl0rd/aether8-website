@@ -21,7 +21,7 @@ html {
 }
 
 h1, h2, h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   letter-spacing: -0.02em;
 }
 
@@ -74,6 +74,10 @@ body::before {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-shift 6s ease-in-out infinite;
+  /* Prevent descender clipping from background-clip: text */
+  display: inline-block;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
 }
 
 /* Accent line */
