@@ -19,7 +19,7 @@ const year = new Date().getFullYear();
         </a>
         <div class="flex items-center gap-4">
           <a
-            href="mailto:hello@aether8.ai?subject=Scrnr Waitlist"
+            href="#waitlist"
             class="text-[11px] tracking-[0.15em] uppercase border border-emerald-500/30 text-emerald-400/80 px-5 py-2 rounded-full hover:border-emerald-500 hover:text-emerald-400 hover:bg-emerald-500/5 transition-all duration-300"
           >Join Waitlist</a>
         </div>
@@ -60,7 +60,7 @@ const year = new Date().getFullYear();
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up delay-4">
         <a
-          href="mailto:hello@aether8.ai?subject=Scrnr Waitlist"
+          href="#waitlist"
           class="group inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_30px_rgba(52,211,153,0.15)]"
         >
           Join the Waitlist
@@ -178,28 +178,107 @@ const year = new Date().getFullYear();
   </section>
 
   <!-- ── Waitlist CTA ───────────────────────────────────────────────────────────── -->
-  <section class="py-32 px-6 relative overflow-hidden">
+  <section id="waitlist" class="py-32 px-6 relative overflow-hidden">
     <div class="accent-line max-w-6xl mx-auto mb-32"></div>
     <div class="absolute inset-0 pointer-events-none">
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/[0.04] rounded-full blur-[100px]"></div>
     </div>
-    <div class="relative z-10 max-w-2xl mx-auto text-center reveal">
-      <p class="text-emerald-400/70 text-[11px] tracking-[0.35em] uppercase mb-6 font-medium">Early Access</p>
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-        Built for high-volume B2C businesses<br class="hidden sm:block" /> that can't afford bad data.
-      </h2>
-      <p class="text-slate-400 leading-relaxed mb-3 max-w-lg mx-auto">
-        Home services. Dental &amp; medspa. Fitness studios. Mortgage &amp; insurance brokers. If you're working a large consumer contact base, Scrnr is built for you.
-      </p>
-      <p class="text-slate-600 text-[13px] mb-3">Each deployment is configured to your database size, workflow, and CRM.</p>
-      <p class="text-emerald-400/50 text-[13px] mb-10">Free contact health check included for all early access partners.</p>
-      <a
-        href="mailto:hello@aether8.ai?subject=Scrnr Waitlist"
-        class="group inline-flex items-center gap-2 bg-white text-[#06060e] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_30px_rgba(52,211,153,0.15)]"
-      >
-        Join the Waitlist
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
+    <div class="relative z-10 max-w-2xl mx-auto reveal">
+
+      <!-- Heading block — always visible -->
+      <div class="text-center mb-10">
+        <p class="text-emerald-400/70 text-[11px] tracking-[0.35em] uppercase mb-6 font-medium">Early Access</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
+          Built for high-volume B2C businesses<br class="hidden sm:block" /> that can't afford bad data.
+        </h2>
+        <p class="text-slate-400 leading-relaxed mb-2 max-w-lg mx-auto">
+          Home services. Dental &amp; medspa. Fitness studios. Mortgage &amp; insurance brokers. If you're working a large consumer contact base, Scrnr is built for you.
+        </p>
+        <p class="text-emerald-400/50 text-[13px]">Free contact health check included for all early access partners.</p>
+      </div>
+
+      <!-- Form state: default -->
+      <div id="waitlist-form-wrap" class="glass-card rounded-2xl p-8 md:p-10" style="border-color: rgba(52,211,153,0.12);">
+        <form id="waitlist-form" class="flex flex-col gap-5" novalidate>
+
+          <!-- Name + Email row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label for="wl-name" class="text-[11px] text-slate-400 tracking-[0.15em] uppercase">Your Name</label>
+              <input
+                id="wl-name" name="name" type="text" required autocomplete="name"
+                placeholder="Jane Smith"
+                class="bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06] transition-all duration-200"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="wl-email" class="text-[11px] text-slate-400 tracking-[0.15em] uppercase">Work Email</label>
+              <input
+                id="wl-email" name="email" type="email" required autocomplete="email"
+                placeholder="jane@company.com"
+                class="bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06] transition-all duration-200"
+              />
+            </div>
+          </div>
+
+          <!-- Business type -->
+          <div class="flex flex-col gap-1.5">
+            <label for="wl-business" class="text-[11px] text-slate-400 tracking-[0.15em] uppercase">Business Type</label>
+            <select
+              id="wl-business" name="business_type" required
+              class="bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06] transition-all duration-200 appearance-none"
+              style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22><path d=%22m6 9 6 6 6-6%22/></svg>'); background-repeat: no-repeat; background-position: right 14px center;"
+            >
+              <option value="" disabled selected class="bg-[#0d0d1a] text-slate-400">Select your industry</option>
+              <option value="real_estate" class="bg-[#0d0d1a]">Real Estate</option>
+              <option value="insurance" class="bg-[#0d0d1a]">Insurance / Financial Services</option>
+              <option value="home_services" class="bg-[#0d0d1a]">Home Services</option>
+              <option value="dental_medspa" class="bg-[#0d0d1a]">Dental / Medspa</option>
+              <option value="fitness" class="bg-[#0d0d1a]">Fitness / Wellness</option>
+              <option value="mortgage" class="bg-[#0d0d1a]">Mortgage / Lending</option>
+              <option value="other" class="bg-[#0d0d1a]">Other</option>
+            </select>
+          </div>
+
+          <!-- Optional notes -->
+          <div class="flex flex-col gap-1.5">
+            <label for="wl-notes" class="text-[11px] text-slate-400 tracking-[0.15em] uppercase">
+              Contact Volume <span class="text-slate-600 normal-case tracking-normal">(optional)</span>
+            </label>
+            <input
+              id="wl-notes" name="notes" type="text"
+              placeholder="Approx. database size and current workflow"
+              class="bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06] transition-all duration-200"
+            />
+          </div>
+
+          <!-- Error message -->
+          <p id="wl-error" class="hidden text-red-400 text-[13px] text-center"></p>
+
+          <!-- Submit -->
+          <button
+            type="submit" id="wl-submit"
+            class="group inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_30px_rgba(52,211,153,0.15)] disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <span id="wl-submit-label">Join the Waitlist</span>
+            <svg id="wl-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg id="wl-spinner" class="hidden animate-spin" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+          </button>
+
+          <p class="text-slate-600 text-[11px] text-center">No spam. We'll reach out when a deployment slot opens.</p>
+        </form>
+      </div>
+
+      <!-- Success state (hidden until form submitted) -->
+      <div id="waitlist-success" class="hidden glass-card rounded-2xl p-10 text-center" style="border-color: rgba(52,211,153,0.2);">
+        <div class="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 class="text-white font-semibold text-xl mb-3">You're on the list.</h3>
+        <p class="text-slate-400 leading-relaxed max-w-sm mx-auto mb-2">Check your inbox for a confirmation. We'll be in touch when your deployment slot opens.</p>
+        <p class="text-emerald-400/60 text-[13px]">Free contact health check included.</p>
+      </div>
+
     </div>
   </section>
 
@@ -230,10 +309,69 @@ const year = new Date().getFullYear();
   </style>
 
   <script is:inline>
+    // Nav scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
+
+    // Waitlist form
+    const form = document.getElementById('waitlist-form');
+    const formWrap = document.getElementById('waitlist-form-wrap');
+    const successEl = document.getElementById('waitlist-success');
+    const errorEl = document.getElementById('wl-error');
+    const submitBtn = document.getElementById('wl-submit');
+    const submitLabel = document.getElementById('wl-submit-label');
+    const arrow = document.getElementById('wl-arrow');
+    const spinner = document.getElementById('wl-spinner');
+
+    function setLoading(loading) {
+      submitBtn.disabled = loading;
+      submitLabel.textContent = loading ? 'Submitting...' : 'Join the Waitlist';
+      arrow.classList.toggle('hidden', loading);
+      spinner.classList.toggle('hidden', !loading);
+    }
+
+    function showError(msg) {
+      errorEl.textContent = msg;
+      errorEl.classList.remove('hidden');
+    }
+
+    form && form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorEl.classList.add('hidden');
+
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const business_type = form.querySelector('[name="business_type"]').value;
+      const notes = form.querySelector('[name="notes"]').value.trim();
+
+      if (!name) return showError('Please enter your name.');
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showError('Please enter a valid email address.');
+      if (!business_type) return showError('Please select your business type.');
+
+      setLoading(true);
+
+      try {
+        const res = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, business_type, notes }),
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          formWrap.classList.add('hidden');
+          successEl.classList.remove('hidden');
+        } else {
+          showError(data.error || 'Something went wrong. Please try again.');
+          setLoading(false);
+        }
+      } catch {
+        showError('Network error. Please try again or email hello@aether8.ai.');
+        setLoading(false);
+      }
+    });
   </script>
 
 </Layout>
