@@ -94,7 +94,11 @@ No tiered plans, no feature gates, no "Start Free Trial" language.
       Note: B2BRocket patent claim researched — no USPTO filings found, zero IP risk
 
 ### Site Improvements
-- [ ] Open Graph images per product page (currently using logo fallback)
+- [x] Open Graph images per product page — og-home/pursuit/showwalker/scrnr.png (1200×630, dark typographic, product accent glows)
+- [x] Fix hero heading font — h1/h2/h3 switched from Syne → Inter for cleaner multi-line prose rendering
+- [x] Fix gradient-text descender clipping (padding-bottom/margin-bottom offset on .gradient-text)
+- [x] Fix hero h1 line-height (1.15 → 1.3)
+- [x] Pursuit engagement pricing model — tasks/pursuit-engagement-pricing.md (3-phase, COGS math, B2BRocket comparison)
 - [ ] Add analytics to product pages (Vercel Analytics or Plausible)
 - [ ] Sitemap updates to include product page paths
 - [ ] Social proof / testimonials sections (once first customers confirm)
