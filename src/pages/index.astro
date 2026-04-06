@@ -102,7 +102,7 @@ const year = new Date().getFullYear();
       <div class="cta-group flex flex-col sm:flex-row gap-4 items-center mt-2">
         <a
           href="mailto:hello@aether8.ai"
-          class="group relative inline-flex items-center gap-2.5 bg-white text-[#06060e] font-semibold px-8 py-3.5 rounded-full text-sm tracking-wide overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,212,255,0.35)]"
+          class="cta-primary group relative inline-flex items-center gap-2.5 bg-white text-[#06060e] font-semibold px-8 py-3.5 rounded-full text-sm tracking-wide overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,212,255,0.35)]"
         >
           <span class="relative z-10">Start a Project</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -134,7 +134,7 @@ const year = new Date().getFullYear();
   <section id="services" class="py-32 px-6 relative">
     <div class="max-w-6xl mx-auto">
 
-      <div class="text-center mb-20">
+      <div class="text-center mb-20 reveal">
         <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">How We Work</p>
         <h2 class="text-3xl md:text-[2.75rem] font-bold tracking-tight leading-tight">Your Forward-Deployed<br class="hidden sm:block" /> AI Partner</h2>
         <p class="text-slate-400 mt-5 max-w-2xl mx-auto text-base leading-relaxed">
@@ -146,7 +146,7 @@ const year = new Date().getFullYear();
       <div class="grid md:grid-cols-3 gap-4">
 
         <!-- Tailored AI Solutions -->
-        <div class="glass-card group p-8 rounded-2xl cursor-default">
+        <div class="glass-card group p-8 rounded-2xl cursor-default reveal">
           <div class="w-11 h-11 rounded-xl bg-[var(--color-accent)]/[0.08] flex items-center justify-center mb-6 group-hover:bg-[var(--color-accent)]/[0.15] transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
@@ -160,7 +160,7 @@ const year = new Date().getFullYear();
         </div>
 
         <!-- Forward-Deployed Engineering -->
-        <div class="glass-card group p-8 rounded-2xl cursor-default">
+        <div class="glass-card group p-8 rounded-2xl cursor-default reveal">
           <div class="w-11 h-11 rounded-xl bg-[var(--color-purple)]/[0.08] flex items-center justify-center mb-6 group-hover:bg-[var(--color-purple)]/[0.15] transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
           </div>
@@ -173,7 +173,7 @@ const year = new Date().getFullYear();
         </div>
 
         <!-- Security, Reliability & Observability -->
-        <div class="glass-card group p-8 rounded-2xl cursor-default">
+        <div class="glass-card group p-8 rounded-2xl cursor-default reveal">
           <div class="w-11 h-11 rounded-xl bg-emerald-500/[0.08] flex items-center justify-center mb-6 group-hover:bg-emerald-500/[0.15] transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
@@ -195,7 +195,7 @@ const year = new Date().getFullYear();
     <div class="accent-line max-w-6xl mx-auto mb-32"></div>
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-start">
 
-      <div>
+      <div class="reveal">
         <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-5 font-medium">Our Approach</p>
         <h2 class="text-3xl md:text-[2.75rem] font-bold tracking-tight leading-tight mb-7">
           Built for SMBs.<br/>Built to Last.
@@ -225,7 +225,7 @@ const year = new Date().getFullYear();
       </div>
 
       <!-- Feature list -->
-      <div class="space-y-3">
+      <div class="space-y-3 reveal">
         <div class="glass-card p-5 rounded-xl flex gap-4">
           <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] mt-2 shrink-0 shadow-[0_0_6px_var(--color-accent)]"></div>
           <div>
@@ -289,7 +289,7 @@ const year = new Date().getFullYear();
             </ul>
           </div>
           <div class="relative z-10 mt-auto flex flex-col gap-3">
-            <a href="https://pursuit.aether8.ai" class="group/btn inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-5 py-2.5 rounded-full text-[13px] font-semibold tracking-wide hover:bg-[var(--color-accent)] transition-all duration-300">
+            <a href="https://pursuit.aether8.ai" class="cta-primary group/btn inline-flex items-center justify-center gap-2 bg-white text-[#06060e] px-5 py-2.5 rounded-full text-[13px] font-semibold tracking-wide hover:bg-[var(--color-accent)] transition-all duration-300">
               Talk to Us
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/btn:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
@@ -364,7 +364,7 @@ const year = new Date().getFullYear();
       </p>
       <a
         href="mailto:hello@aether8.ai"
-        class="group inline-flex items-center gap-3 bg-white text-[#06060e] font-semibold px-10 py-4 rounded-full text-base cursor-pointer transition-all duration-300 hover:shadow-[0_0_50px_rgba(0,212,255,0.3)] hover:scale-[1.02]"
+        class="cta-primary group inline-flex items-center gap-3 bg-white text-[#06060e] font-semibold px-10 py-4 rounded-full text-base cursor-pointer transition-all duration-300 hover:shadow-[0_0_50px_rgba(0,212,255,0.3)] hover:scale-[1.02]"
       >
         hello@aether8.ai
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
