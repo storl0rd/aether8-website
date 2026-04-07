@@ -1,0 +1,336 @@
+---
+import Layout from '../layouts/Layout.astro';
+const year = new Date().getFullYear();
+---
+
+<Layout
+  title="About Aether8 | AI Consulting Founded by Industry Veterans"
+  description="Aether8 AI Consulting Inc. was founded by a 25-year technology industry veteran who has built systems through the internet, mobile, cloud, and now the AI era. Based in London, Ontario."
+  ogImage="/og-home.png"
+>
+
+  <!-- ── Nav ───────────────────────────────────────────────────────────────────── -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-6xl mx-auto px-6">
+      <nav class="flex items-center justify-between h-16 border-b border-white/[0.04]">
+        <a href="/" class="flex items-center gap-2 group">
+          <span class="text-[13px] font-semibold tracking-[0.25em] uppercase text-white/90">
+            AETHER<span class="text-[var(--color-accent)]">8</span><span class="text-white/30">.ai</span>
+          </span>
+        </a>
+        <div class="flex items-center gap-4">
+          <a href="/#services" class="hidden md:block px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300">Services</a>
+          <a href="/#products" class="hidden md:block px-4 py-2 text-[11px] text-slate-400 tracking-[0.2em] uppercase hover:text-white transition-colors duration-300">Products</a>
+          <a href="/about/" class="hidden md:block px-4 py-2 text-[11px] text-white tracking-[0.2em] uppercase transition-colors duration-300">About</a>
+          <a
+            href="mailto:hello@aether8.ai?subject=Let's Talk"
+            class="text-[11px] tracking-[0.15em] uppercase border border-[var(--color-accent)]/30 text-[var(--color-accent)]/80 px-5 py-2 rounded-full hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5 transition-all duration-300"
+          >Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Hero ──────────────────────────────────────────────────────────────────── -->
+  <section class="min-h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-24 pb-16 relative overflow-hidden">
+
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[var(--color-accent)]/[0.03] rounded-full blur-[140px]"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[var(--color-purple)]/[0.025] rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-5 font-medium animate-fade-up">Who We Are</p>
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-6 animate-fade-up delay-1">
+        Built by people who've<br class="hidden sm:block" /> seen what comes next.
+      </h1>
+      <p class="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto animate-fade-up delay-2">
+        Aether8 was founded by a technology industry veteran with over 25 years of experience — someone who has built, scaled, and operated systems through every major platform shift of the last three decades.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Accent line ─────────────────────────────────────────────────────────── -->
+  <div class="accent-line max-w-6xl mx-auto"></div>
+
+  <!-- ── The Story ─────────────────────────────────────────────────────────────── -->
+  <section class="py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+
+        <!-- Left: Timeline -->
+        <div class="reveal">
+          <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-6 font-medium">The Journey</p>
+          <div class="space-y-10">
+
+            <div class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-8 h-8 rounded-full bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-[10px] font-bold text-[var(--color-accent)]">01</span>
+                </div>
+                <div class="w-px flex-1 bg-gradient-to-b from-[var(--color-accent)]/20 to-transparent mt-2"></div>
+              </div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">The Internet Era</h3>
+                <p class="text-slate-400 text-[15px] leading-relaxed">Watched the web transform every industry from the inside. Built systems when "scalable" was still a new word, learned that every platform shift creates an asymmetric window for those who move early.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-8 h-8 rounded-full bg-[var(--color-purple)]/10 border border-[var(--color-purple)]/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-[10px] font-bold text-[var(--color-purple)]">02</span>
+                </div>
+                <div class="w-px flex-1 bg-gradient-to-b from-[var(--color-purple)]/20 to-transparent mt-2"></div>
+              </div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">The Mobile Era</h3>
+                <p class="text-slate-400 text-[15px] leading-relaxed">Moved fast when mobile rewrote the rules of software. The lesson was consistent: organisations that wait for certainty miss the window. Those that build with the new primitive win.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-[10px] font-bold text-emerald-400">03</span>
+                </div>
+                <div class="w-px flex-1 bg-gradient-to-b from-emerald-500/20 to-transparent mt-2"></div>
+              </div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">The Cloud Era</h3>
+                <p class="text-slate-400 text-[15px] leading-relaxed">Designed and operated large-scale infrastructure through the cloud transition. Developed a deep understanding of reliability engineering — how to build systems that don't break when the stakes are highest.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-5">
+              <div class="flex flex-col items-center">
+                <div class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span class="text-[10px] font-bold text-amber-400">04</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">The AI Era — Now</h3>
+                <p class="text-slate-400 text-[15px] leading-relaxed">AI is the biggest platform shift yet. Unlike previous eras, the leverage is available to small and mid-sized organisations immediately — not just to companies with enterprise R&D budgets. Aether8 was founded to make that leverage real for the businesses that need it most.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Why Aether8 -->
+        <div class="space-y-8 reveal">
+          <div>
+            <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-6 font-medium">Why We Exist</p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-5 leading-tight">Most businesses are being sold AI. We build it.</h2>
+            <p class="text-slate-400 leading-relaxed mb-5">
+              The market is full of generic AI tools that promise transformation and deliver dashboards. They're built for everyone, which means they're optimised for no one. Getting real value from them requires expertise most SMBs don't have in-house — and time they can't afford to spend.
+            </p>
+            <p class="text-slate-400 leading-relaxed">
+              Aether8 was built on a different premise: that an AI deployment should arrive knowing your ICP, your workflows, and your definition of a good outcome. Not a tool you configure — a system built around how you already operate.
+            </p>
+          </div>
+
+          <div class="accent-line"></div>
+
+          <div>
+            <h2 class="text-xl font-bold tracking-tight mb-4">Forward-Deployed, Not Remote-Advised</h2>
+            <p class="text-slate-400 leading-relaxed">
+              We embed with clients rather than handing over a product and walking away. That means learning the edge cases, the exceptions, the workflows your team has evolved over years — and building AI that fits those realities rather than asking your team to change for the software.
+            </p>
+          </div>
+
+          <div class="accent-line"></div>
+
+          <div>
+            <h2 class="text-xl font-bold tracking-tight mb-4">SRE-Grade Reliability, Not AI Theatre</h2>
+            <p class="text-slate-400 leading-relaxed">
+              Every system we deploy is observable, traceable, and built to fail gracefully. No hallucinations reaching customers. No black-box decisions. Every AI action is logged, every output is auditable, and every edge case surfaces for human review rather than silently corrupting data downstream.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Principles ─────────────────────────────────────────────────────────── -->
+  <div class="accent-line max-w-6xl mx-auto"></div>
+  <section class="py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">How We Work</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Principles we don't compromise on.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Reliability is non-negotiable</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">We come from infrastructure and SRE backgrounds where systems failing in production has real consequences. That mindset carries into every AI deployment — guardrails, audit trails, and graceful degradation are defaults, not add-ons.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-purple)]/10 border border-[var(--color-purple)]/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Tailored over templated</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Generic AI tools are built for the median use case. Our deployments are built around your specific ICP, your data, your CRM, and your team's workflow. The difference in output quality is not incremental — it's categorical.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="text-white font-semibold text-lg mb-3">Measurable outcomes only</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">We don't count demos or dashboards as success. Every engagement is scoped around a concrete business outcome — hours recovered, pipeline generated, contacts qualified — with the observability to prove it.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────────────────────────────────────────── -->
+  <div class="accent-line max-w-6xl mx-auto"></div>
+  <section class="py-24 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <div class="text-center mb-14 reveal">
+        <p class="text-[var(--color-accent)]/70 text-[11px] tracking-[0.35em] uppercase mb-4 font-medium">Common Questions</p>
+        <h2 class="text-3xl font-bold tracking-tight">About Aether8</h2>
+      </div>
+
+      <div class="space-y-4 reveal">
+
+        <div class="glass-card rounded-2xl p-7">
+          <h3 class="text-white font-semibold mb-3">Where is Aether8 based?</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Aether8 AI Consulting Inc. is based in London, Ontario, Canada. We work with clients across Ontario and nationwide, with the ability to embed on-site with teams when the engagement calls for it.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7">
+          <h3 class="text-white font-semibold mb-3">What types of businesses does Aether8 work with?</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">We work primarily with small and mid-sized businesses that have real operational problems and are ready to deploy AI seriously — not pilot it as a proof of concept. Our clients are typically in B2B sales, professional services, home services, insurance, real estate, and any industry with high-volume contact or lead workflows.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7">
+          <h3 class="text-white font-semibold mb-3">How is Aether8 different from a traditional AI consultant?</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Most AI consultants advise and hand over a report. Aether8 builds and deploys. We embed with your team, configure the system around your actual workflow, and stay involved through launch and beyond. The engagement ends when the system is running reliably in production — not when the slide deck is done.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7">
+          <h3 class="text-white font-semibold mb-3">Does Aether8 offer ongoing support after deployment?</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Yes. Every deployment includes a support window, and most clients move to an operating retainer where Aether8 continues to run, tune, and evolve the system as the business grows. AI models and data change — we make sure the deployment keeps up.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7">
+          <h3 class="text-white font-semibold mb-3">How does Aether8 handle data privacy and security?</h3>
+          <p class="text-slate-400 leading-relaxed text-[15px]">Every deployment is built with audit trails, access controls, and observability baked in from the start. We do not use client data to train shared models. Each deployment is isolated to the client's environment, and every AI decision is logged and traceable — so you always know what the system did and why.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────────────────────────────── -->
+  <div class="accent-line max-w-6xl mx-auto"></div>
+  <section class="py-24 px-6 text-center relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[var(--color-accent)]/[0.03] rounded-full blur-[100px]"></div>
+    </div>
+    <div class="max-w-2xl mx-auto relative z-10 reveal">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-5">Ready to work with us?</h2>
+      <p class="text-slate-400 leading-relaxed mb-9">We take on a select number of clients each quarter. If you have a real operational problem and want to see what a properly deployed AI system can do — let's talk.</p>
+      <a
+        href="mailto:hello@aether8.ai?subject=Let's Talk — Aether8"
+        class="cta-primary group inline-flex items-center gap-2 bg-white text-[#06060e] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide hover:bg-[var(--color-accent)] transition-all duration-300 shadow-[0_0_30px_rgba(0,212,255,0.12)]"
+      >
+        Start a Conversation
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform duration-200"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────────────── -->
+  <footer class="py-12 px-6 border-t border-white/[0.04]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-500 text-[13px]">Aether8 AI Consulting Inc. · London, Ontario, Canada</p>
+      <div class="flex items-center gap-6 text-[13px]">
+        <a href="/about/" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">About</a>
+        <a href="https://pursuit.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Pursuit</a>
+        <a href="https://showwalker.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Showwalker</a>
+        <a href="https://scrnr.aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">Scrnr</a>
+        <a href="https://aether8.ai" class="text-slate-400 hover:text-slate-200 transition-colors duration-200">aether8.ai</a>
+      </div>
+      <p class="text-slate-600 text-[13px]">&copy; {year} Aether8 AI Consulting Inc.</p>
+    </div>
+  </footer>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" is:inline>{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where is Aether8 based?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aether8 AI Consulting Inc. is based in London, Ontario, Canada. We work with clients across Ontario and nationwide, with the ability to embed on-site with teams when the engagement calls for it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of businesses does Aether8 work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work primarily with small and mid-sized businesses that have real operational problems and are ready to deploy AI seriously. Our clients are typically in B2B sales, professional services, home services, insurance, real estate, and any industry with high-volume contact or lead workflows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Aether8 different from a traditional AI consultant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most AI consultants advise and hand over a report. Aether8 builds and deploys. We embed with your team, configure the system around your actual workflow, and stay involved through launch and beyond. The engagement ends when the system is running reliably in production."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Aether8 offer ongoing support after deployment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every deployment includes a support window, and most clients move to an operating retainer where Aether8 continues to run, tune, and evolve the system as the business grows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Aether8 handle data privacy and security?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every deployment is built with audit trails, access controls, and observability baked in from the start. We do not use client data to train shared models. Each deployment is isolated to the client's environment, and every AI decision is logged and traceable."
+        }
+      }
+    ]
+  }</script>
+
+  <style>
+    #nav.scrolled {
+      background: rgba(6, 6, 14, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+  </style>
+
+  <script is:inline>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+  </script>
+
+</Layout>
