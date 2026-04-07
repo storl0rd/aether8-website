@@ -93,6 +93,23 @@ No tiered plans, no feature gates, no "Start Free Trial" language.
 - [ ] Engage patent counsel on Showwalker provisional patent filing
       Note: B2BRocket patent claim researched — no USPTO filings found, zero IP risk
 
+### Local SEO — Google Rankings (London Ontario / Ontario Canada)
+- [ ] Set up Google Business Profile (business.google.com) — category: IT Consultant + Business Management Consultant, service area: London ON + Ontario
+- [ ] Add phone number to site footer and Organization schema (openingHours, telephone fields)
+- [ ] Build /blog/ section into the site (index page + individual post layout)
+- [ ] Write blog post 1: "What is AI consulting and does your Ontario business need it?" (target: ai consulting ontario, 1,200 words)
+- [ ] Write blog post 2: "AI automation for small businesses in London, Ontario: a practical guide" (target: ai automation london ontario, 1,000 words)
+- [ ] Write blog post 3: "Forward-deployed AI: why generic tools fail SMBs" (target: ai consulting for small business canada, 1,000 words)
+- [ ] Write blog post 4: "How London Ontario businesses are using AI in 2026" (target: london ontario ai business, 800 words)
+- [ ] Write blog post 5: "AI sales research for B2B teams: how Pursuit works" (target: ai sales research agent, 900 words)
+- [ ] Submit to local citation directories: Yellow Pages Canada, Canada411, BBB Canada, Clutch.co, London Chamber of Commerce, Ontario Chamber of Commerce
+- [ ] Get 5+ Google reviews from contacts/colleagues to enter map pack
+- [ ] Add HowTo schema to 3-step process flows on Pursuit, Showwalker, Scrnr pages
+- [ ] Add FAQ sections + FAQPage schema to product pages (4-6 Q&As each)
+- [ ] Expand Pursuit page content to 700+ words (currently ~375 — below thin-page threshold)
+  Note: Full SEO/GEO/AEO audit completed April 6, 2026 — report at tasks/seo-audit-aether8-ai-2026-04-06.pdf
+  Realistic timeline: map pack eligible month 1, page 1 organic for London/Ontario terms by month 4-6
+
 ### Site Improvements
 - [x] Open Graph images per product page — og-home/pursuit/showwalker/scrnr.png (1200×630, dark typographic, product accent glows)
 - [x] Fix hero heading font — h1/h2/h3 switched from Syne → Inter for cleaner multi-line prose rendering
